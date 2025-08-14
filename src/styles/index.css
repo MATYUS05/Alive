@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@layer base {
+  @import url('https://fonts.googleapis.com/css2?family=Itim&family=Josefin+Sans:wght@400;700&display=swap');
+
+  .font-itim {
+    font-family: 'Itim', cursive;
+  }
+
+  .font-josefin {
+    font-family: 'Josefin Sans', sans-serif;
+  }
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
