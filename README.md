@@ -1,12 +1,20 @@
-# React + Vite
+Instalasi
+Clone repositori ini
+Buka terminal atau command prompt Anda dan jalankan perintah berikut:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+git clone [https://github.com/MATYUS05/Alive.git](https://github.com/MATYUS05/Alive.git)
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Masuk ke direktori proyek
 
-## Expanding the ESLint configuration
+cd Alive
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Instal semua dependensi
+Proyek ini menggunakan npm sebagai package manager. Jalankan perintah berikut untuk menginstal semua library yang dibutuhkan (seperti React, Tailwind, dll.):
+
+npm install
+
+Menjalankan Proyek
+Setelah instalasi selesai, jalankan server pengembangan lokal dengan perintah:
+
+npm run dev
