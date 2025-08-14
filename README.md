@@ -1,20 +1,18 @@
-Instalasi
-Clone repositori ini
-Buka terminal atau command prompt Anda dan jalankan perintah berikut:
+# Alive
 
-git clone [https://github.com/MATYUS05/Alive.git](https://github.com/MATYUS05/Alive.git)
+Sebelum instalasi, silahkan buat folder kosong terlebih dahulu
+## 🚀 Instalasi
 
+1. **Clone repositori ini**
+   ```bash
+   git clone https://github.com/MATYUS05/Alive.git
 
-Masuk ke direktori proyek
-
-cd Alive
-
-Instal semua dependensi
-Proyek ini menggunakan npm sebagai package manager. Jalankan perintah berikut untuk menginstal semua library yang dibutuhkan (seperti React, Tailwind, dll.):
-
-npm install
-
-Menjalankan Proyek
-Setelah instalasi selesai, jalankan server pengembangan lokal dengan perintah:
-
-npm run dev
+2. **Ganti Direktori Proyek**
+   ```bash
+   cd Alive
+3. **Instal semua dependensi**
+   ```bash
+   npm install
+4. **Setelah instalasi selesai, jalankan server**
+   ```bash
+   npm run dev
