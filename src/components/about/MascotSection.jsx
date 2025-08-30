@@ -71,44 +71,81 @@ const MascotSection = () => {
           md:flex md:flex-row md:justify-center md:items-end 
           relative z-10 
         ">
-          <motion.img
-            src={Shui}
-            alt="Shui"
-            className="w-28 sm:w-36 md:w-56 lg:w-80 h-auto cursor-pointer col-start-1 row-start-2 z-10"
-            whileHover={{ scale: 1.1, y: -20, transition: { duration: 0.1 } }}
-            whileTap={{ scale: 0.95 }}
-            initial={{ y: 50, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ y: { duration: 0.2 } }}
-            onClick={() => setSelectedMascot('Shui')}
-          />
+          {/* Shui */}
+          <div className="relative col-start-1 row-start-2">
+            <motion.img
+              src={Shui}
+              alt="Shui"
+              className="relative z-10 w-28 sm:w-36 md:w-56 lg:w-80 h-auto cursor-pointer"
+              whileHover={{ scale: 1.1, y: -20 }}
+              whileTap={{ scale: 0.95 }}
+              initial={{ y: 50, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ y: { duration: 0.2 } }}
+              onClick={() => setSelectedMascot('Shui')}
+            />
+            {/* radial shadow animasi + hover */}
+            <motion.div 
+              className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-12 
+                         bg-[radial-gradient(ellipse_at_center,_rgba(0,0,0,0.5)_0%,_transparent_80%)] 
+                         z-0 rounded-full"
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              whileHover={{ scale: 1.2, opacity: 0.7 }}
+              transition={{ duration: 0.4 }}
+            />
+          </div>
 
-          <motion.img
-            src={Seed}
-            alt="Seed"
-            className="w-32 sm:w-40 md:w-64 lg:w-96 h-auto cursor-pointer col-start-2 row-start-1 z-20"
-            whileHover={{ scale: 1.1, y: -20, transition: { duration: 0.1 } }}
-            whileTap={{ scale: 0.95 }}
-            initial={{ y: 50, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ y: { duration: 0.2 } }}
-            onClick={() => setSelectedMascot('Seed')}
-          />
+          {/* Seed */}
+          <div className="relative col-start-2 row-start-1 z-20">
+            <motion.img
+              src={Seed}
+              alt="Seed"
+              className="relative z-10 w-32 sm:w-40 md:w-64 lg:w-96 h-auto cursor-pointer"
+              whileHover={{ scale: 1.1, y: -20 }}
+              whileTap={{ scale: 0.95 }}
+              initial={{ y: 50, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ y: { duration: 0.2 } }}
+              onClick={() => setSelectedMascot('Seed')}
+            />
+            <motion.div 
+              className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-14 
+                         bg-[radial-gradient(ellipse_at_center,_rgba(0,0,0,0.55)_0%,_transparent_80%)] 
+                         z-0 rounded-full"
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              whileHover={{ scale: 1.2, opacity: 0.7 }}
+              transition={{ duration: 0.4 }}
+            />
+          </div>
 
-          <motion.img
-            src={Sol}
-            alt="Sol"
-            className="w-28 sm:w-36 md:w-56 lg:w-80 h-auto cursor-pointer col-start-3 row-start-2 z-10"
-            whileHover={{ scale: 1.1, y: -20, transition: { duration: 0.1 } }}
-            whileTap={{ scale: 0.95 }}
-            initial={{ y: 50, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ y: { duration: 0.2 } }}
-            onClick={() => setSelectedMascot('Sol')}
-          />
+          {/* Sol */}
+          <div className="relative col-start-3 row-start-2">
+            <motion.img
+              src={Sol}
+              alt="Sol"
+              className="relative z-10 w-28 sm:w-36 md:w-56 lg:w-80 h-auto cursor-pointer"
+              whileHover={{ scale: 1.1, y: -20 }}
+              whileTap={{ scale: 0.95 }}
+              initial={{ y: 50, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ y: { duration: 0.2 } }}
+              onClick={() => setSelectedMascot('Sol')}
+            />
+            <motion.div 
+              className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-12 
+                         bg-[radial-gradient(ellipse_at_center,_rgba(0,0,0,0.5)_0%,_transparent_80%)] 
+                         z-0 rounded-full"
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              whileHover={{ scale: 1.2, opacity: 0.7 }}
+              transition={{ duration: 0.4 }}
+            />
+          </div>
         </div>
       </div>
 
@@ -122,20 +159,20 @@ const MascotSection = () => {
             onClick={() => setSelectedMascot(null)}
           >
             <motion.div
-              className="bg-white/90 backdrop-blur-md rounded-2xl shadow-2xl 
+              className="bg-white/90 backdrop-blur-md rounded-2xl shadow-xl hover:shadow-2xl transition-shadow
                          p-4 sm:p-6 md:p-8 
                          w-full max-w-sm sm:max-w-md md:max-w-2xl lg:max-w-3xl 
                          flex flex-col md:flex-row items-center gap-4 md:gap-8 border border-gray-200"
               initial={{ y: 100, scale: 0.9 }}
               animate={{ y: 0, scale: 1 }}
               exit={{ y: 100, scale: 0.9 }}
-              transition={{ type: "spring", stiffness: 200, damping: 20 }}
+              transition={{ type: 'spring', stiffness: 200, damping: 20 }}
               onClick={(e) => e.stopPropagation()}
             >
               <img
                 src={mascotInfo[selectedMascot]?.img}
                 alt={mascotInfo[selectedMascot]?.name}
-                className="w-24 sm:w-32 md:w-40 lg:w-56 h-auto"
+                className="w-24 sm:w-32 md:w-40 lg:w-56 h-auto drop-shadow-xl"
               />
               <div className="text-center md:text-left">
                 <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-[#5d3f2d] mb-2 md:mb-4">
