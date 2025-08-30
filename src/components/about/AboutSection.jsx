@@ -28,7 +28,7 @@ const AboutSection = () => {
       </motion.h2>
 
       <motion.div 
-        className="bg-white p-6 sm:p-8 md:p-12 rounded-2xl shadow-2xl max-w-7xl w-full"
+        className="bg-white p-6 sm:p-8 md:p-12 rounded-2xl shadow-2xl max-w-5xl w-full"
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.8 }}
@@ -46,15 +46,12 @@ const AboutSection = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nunc ligula, consectetur at magna non, malesuada rhoncus odio.
             Phasellus id lacus suscipit, placerat sem ut, placerat erat. Aliquam erat volutpat. Proin sit amet dui vel dui lacinia placerat.
             Pellentesque non magna urna. Morbi eu eros volutpat, condimentum quam eu, ultricies erat. Suspendisse sit amet porta nibh, in varius urna.
-            Sed et dapibus nisi. Phasellus blandit nisi sit amet purus varius suscipit. Fusce dictum porta lacus vitae porttitor.
-            Nulla dictum cursus quam vitae consectetur. Nunc fermentum porttitor placerat. Phasellus dictum pulvinar purus.
+            Sed et dapibus nisi. Phasellus blandit nisi sit amet purus varius suscipit.
             <br /><br />
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla gravida, mauris sit amet luctus efficitur, nisi metus tristique nibh,
             eu consectetur justo diam et lorem. Ut quam lacus, porttitor eget congue vitae, scelerisque eu eros.
             Ut a fermentum mi. Etiam vestibulum mi urna, at interdum arcu vestibulum ut. Cras at eros mollis, vestibulum diam quis, posuere leo.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sapien risus, pretium sed nibh ut, lacinia imperdiet orci.
-            Pellentesque id tempus dui, a lobortis libero. Praesent volutpat sollicitudin lacus, et cursus leo consectetur ut.
-            In sed venenatis lacus. Duis hendrerit sapien ac ornare malesuada. Sed id bibendum justo.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
           </motion.p>
 
           <motion.img

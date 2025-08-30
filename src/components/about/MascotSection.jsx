@@ -67,45 +67,46 @@ const MascotSection = () => {
         </motion.p>
         
         <div className="
-          grid grid-cols-3 gap-6 place-items-center 
-          md:flex md:flex-row md:justify-center md:items-end md:gap-12 lg:gap-20
+          grid grid-cols-3 place-items-center 
+          md:flex md:flex-row md:justify-center md:items-end 
+          relative z-10 
         ">
           <motion.img
             src={Shui}
             alt="Shui"
-            className="w-24 sm:w-32 md:w-40 lg:w-48 h-auto cursor-pointer col-start-1 row-start-2"
-            whileHover={{ scale: 1.1 }}
+            className="w-28 sm:w-36 md:w-56 lg:w-80 h-auto cursor-pointer col-start-1 row-start-2 z-10"
+            whileHover={{ scale: 1.1, y: -20, transition: { duration: 0.1 } }}
             whileTap={{ scale: 0.95 }}
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ y: { duration: 0.2 } }}
             onClick={() => setSelectedMascot('Shui')}
           />
 
           <motion.img
             src={Seed}
             alt="Seed"
-            className="w-28 sm:w-36 md:w-48 lg:w-56 h-auto cursor-pointer col-start-2 row-start-1"
-            whileHover={{ scale: 1.1 }}
+            className="w-32 sm:w-40 md:w-64 lg:w-96 h-auto cursor-pointer col-start-2 row-start-1 z-20"
+            whileHover={{ scale: 1.1, y: -20, transition: { duration: 0.1 } }}
             whileTap={{ scale: 0.95 }}
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition={{ y: { duration: 0.2 } }}
             onClick={() => setSelectedMascot('Seed')}
           />
 
           <motion.img
             src={Sol}
             alt="Sol"
-            className="w-24 sm:w-32 md:w-40 lg:w-48 h-auto cursor-pointer col-start-3 row-start-2"
-            whileHover={{ scale: 1.1 }}
+            className="w-28 sm:w-36 md:w-56 lg:w-80 h-auto cursor-pointer col-start-3 row-start-2 z-10"
+            whileHover={{ scale: 1.1, y: -20, transition: { duration: 0.1 } }}
             whileTap={{ scale: 0.95 }}
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            transition={{ y: { duration: 0.2 } }}
             onClick={() => setSelectedMascot('Sol')}
           />
         </div>
