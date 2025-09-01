@@ -1,4 +1,5 @@
 import React from "react";
+import Alive11 from "../assets/Logo/AliveLogo.png"
 
 function About() {
   return (

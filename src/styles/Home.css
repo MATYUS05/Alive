@@ -1,0 +1,301 @@
+/* global reset */
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  height: auto;
+  overflow-x: hidden;
+}
+
+/* full-width scrollable background */
+.scroll-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: -1;
+}
+
+/* content wrapper */
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 200vh;
+}
+
+/* hero and media section centered */
+.hero,
+.media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* stack carousel, bubble, and CTA vertically */
+.media {
+  flex-direction: column;
+}
+
+/* title styles */
+.title {
+  margin: 0;
+  font-size: 80px;
+  font-weight: 700;
+  font-family: 'Josefin Sans', sans-serif;
+  margin-top: 10%;
+  font-style: italic;
+  color: #617850;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  line-height: 1;
+}
+
+.title span {
+  display: block;
+  margin-top: -10px;
+  color: #5C3C38;
+  font-size: 128px;
+  width: 100%;
+  text-align: center;
+}
+
+/* lead paragraph */
+.lead {
+  max-width: 800px;
+  font-size: 22px;
+  font-family: 'Itim', sans-serif;
+  line-height: 1.6;
+  color: #6B725A;
+  margin-bottom: 40%;
+}
+
+/* carousel container sits above bubble/CTA */
+.carousel {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 30%;
+  margin: 2rem auto 1rem;
+}
+
+/* hide all slides by default */
+.slide {
+  display: none;
+  width: 100%;
+}
+
+.slide.active {
+  display: block;
+  transition: opacity 1s ease-in-out;
+}
+
+/* slide image styling */
+.slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+  outline: #62514F 0.6rem solid;
+}
+
+/* bubble and button */
+.bubble {
+  margin-top: 16px;
+  padding: 10px 14px;
+  background: #B0BEA6;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #47553D;
+  font-size: 32px;
+  border-radius: 10px;
+  font-weight: 700;
+  z-index: 1;
+}
+
+.cta {
+  margin-top: 10px;
+  padding: 10px 18px;
+  background: #B0BEA6;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #47553D;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* -------------------- */
+/* Responsive Design */
+/* -------------------- */
+
+/* Tablet (max-width: 1920px) */
+@media (max-width: 1920px) {
+  .title {
+    font-size: 90px;
+  }
+  .title span {
+    font-size: 120px;
+  }
+  .lead {
+    font-size: 28px;
+    margin-bottom: 60%;   
+    padding: 0 0px;
+  }
+  .carousel {
+    max-width: 30%;
+  }
+  .bubble {
+    font-size: 32px;
+    padding: 8px 12px;
+  }
+  .cta {
+    font-size: 30px;
+    padding: 8px 12px;
+  }
+  .scroll-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 220%;
+  z-index: -1;
+  overflow-x: hidden;
+  }
+  .home-page {
+  min-height: 208vh;
+  }
+}
+
+/* Tablet (max-width: 1440px) */
+@media (max-width: 1440px) {
+  .title {
+    font-size: 90px;
+  }
+  .title span {
+    font-size: 120px;
+  }
+  .lead {
+    font-size: 26px;
+    margin-bottom: 60%;   
+    padding: 0 10%;
+  }
+  .carousel {
+    max-width: 40%;
+  }
+  .scroll-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 180%;
+  z-index: -1;
+  overflow-x: hidden;
+  }
+  .home-page {
+  min-height: 170vh;
+  }
+}
+
+/* Tablet (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .title {
+    font-size: 60px;
+    margin-top: 5%;
+  }
+  .title span {
+    font-size: 90px;
+  }
+  .lead {
+    font-size: 18px;
+    margin-bottom: 15%;   
+    padding: 0 150px;
+  }
+  .carousel {
+    max-width: 35%;
+  }
+  .bubble {
+    font-size: 18px;
+    padding: 8px 12px;
+  }
+  .cta {
+    font-size: 16px;
+    padding: 8px 12px;
+  }
+  .scroll-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow-x: hidden;
+  }
+  .home-page {
+  min-height: 90vh;
+  }
+}
+
+/* Mobile Landscape & Portrait (max-width: 768px) */
+@media (max-width: 768px) {
+  .title {
+    font-size: 42px;
+    margin-top: 5%;
+  }
+  .title span {
+    font-size: 64px;
+  }
+  .lead {
+    font-size: 16px;
+    margin-bottom: 25%;
+    padding: 0 200px;
+  }
+  .carousel {
+    max-width: 40%;
+  }
+  .bubble {
+    font-size: 18px;
+    padding: 8px 12px;
+  }
+  .cta {
+    font-size: 16px;
+    padding: 8px 14px;
+  }
+    .scroll-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  }
+  .home-page {
+  min-height: 90vh;
+  }
+}
+
+/* Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .title {
+    font-size: 32px;
+    margin-top: 20%;
+  }
+  .title span {
+    font-size: 48px;
+  }
+  .lead {
+    font-size: 16px;
+    margin-bottom: 15%;
+  }
+  .carousel {
+    max-width: 90%;
+  }
+  .bubble {
+    font-size: 20px;
+  }
+}
