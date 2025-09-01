@@ -5,7 +5,7 @@ import AliveLogo from "../assets/Logo/AliveLogo.png";
 
 function Footer() {
   return (
-    <footer className="bg-[#5D4037] text-white font-josefin py-8 mt-10">
+    <footer className="bg-[#5D4037] text-white font-josefin py-8">
       <div className="container mx-auto px-8 flex justify-between items-center">
         <div className="flex flex-col space-y-4">
           <a
