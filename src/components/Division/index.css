@@ -1,0 +1,24 @@
+/* File: src/index.css */
+
+.tooltip-left::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  transform: translateY(-50%);
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent rgba(255, 255, 255, 0.9) transparent transparent;
+}
+
+/* TAMBAHKAN INI */
+.tooltip-right::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent transparent rgba(255, 255, 255, 0.9);
+}
