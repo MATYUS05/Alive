@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const ThemeSection = () => {
   return (
     <div className="flex flex-col md:flex-row justify-center items-start 
-                    gap-10 md:gap-20 lg:gap-78 px-4 sm:px-8 md:px-12 lg:px-20">
+                    gap-10 md:gap-20 lg:gap-36 xl:gap-80 px-4 sm:px-8 md:px-12 lg:px-20">
       <motion.div 
         className="bg-white p-6 sm:p-8 md:p-12 rounded-2xl shadow-2xl 
                    w-full sm:w-4/5 md:w-[35%] -mt-10 md:-mt-20 text-left"

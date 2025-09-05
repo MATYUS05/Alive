@@ -13,7 +13,7 @@ import '../components/about/css/style.css';
 
 const pageStyle = {
   backgroundImage: `url(${BackgroundWithFlowers})`,
-  backgroundSize: 'auto',
+  backgroundSize: 'cover',
   backgroundPosition: 'top center',
   backgroundRepeat: 'no-repeat',
   width: '100%',
@@ -125,7 +125,7 @@ export default function About() {
 
       <section
         ref={visionRef}
-        className="min-h-[60vh] flex flex-col justify-center items-center relative pt-50 z-10"
+        className="min-h-[80vh] flex flex-col justify-center items-center relative z-10"
       >
         <VisionMissionSection />
       </section>
