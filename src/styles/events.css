@@ -1,0 +1,70 @@
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeSlideInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes smoothPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.pop-in {
+  animation: popIn 0.6s ease-out forwards;
+}
+
+.fade-slide-in-up {
+  animation: fadeSlideInUp 0.8s ease-out forwards;
+}
+
+.smooth-pop {
+  animation: smoothPop 0.6s ease-out forwards;
+}
+
+.carousel-track {
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1); 
+}
+
