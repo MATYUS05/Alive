@@ -1,0 +1,50 @@
+.cloud-left,
+.cloud-right,
+.cloud-left-back,
+.cloud-right-back {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .cloud-left,
+    .cloud-right,
+    .cloud-left-back,
+    .cloud-right-back {
+        display: block;
+    }
+
+    .cloud-left {
+        position: fixed;
+        bottom: -18vh;
+        left: -10vh;
+        width: 50vw;
+        z-index: 21;
+        transform: translateX(-50%);
+    }
+
+    .cloud-right {
+        position: fixed;
+        bottom: -18vh;
+        right: 0;
+        width: 60vw;
+        z-index: 20;
+    }
+
+    .cloud-left-back {
+        position: fixed;
+        bottom: -10vh;
+        left: 30vh;
+        width: 50vw;
+        z-index: 21;
+        transform: translateX(-50%);
+    }
+
+    .cloud-right-back {
+        position: fixed;
+        bottom: -10vh;
+        right: 45vh;
+        width: 35vw;
+        z-index: 15;
+        transform: translateX(50%) scaleX(-1);
+    }
+}
