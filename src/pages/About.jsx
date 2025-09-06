@@ -13,7 +13,7 @@ import '../components/about/css/style.css';
 
 const pageStyle = {
   backgroundImage: `url(${BackgroundWithFlowers})`,
-  backgroundSize: 'auto',
+  backgroundSize: 'cover',
   backgroundPosition: 'top center',
   backgroundRepeat: 'no-repeat',
   width: '100%',
@@ -98,7 +98,7 @@ export default function About() {
         <AboutSection />
         <motion.button
           onClick={() => scrollTo(themeRef)}
-          className="absolute bottom-8 text-4xl text-[#5d3f2d]"
+          className="absolute bottom-5 text-4xl text-[#5d3f2d]"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ repeat: Infinity, duration: 1, repeatType: "reverse" }}
@@ -109,7 +109,7 @@ export default function About() {
     
       <section
         ref={themeRef}
-        className="min-h-[90vh] flex flex-col justify-center items-center relative z-10"
+        className="min-h-[90vh] xl:min-h-[100vh] flex flex-col justify-center items-center relative z-10"
       >
         <ThemeSection />
         <motion.button
@@ -125,7 +125,7 @@ export default function About() {
 
       <section
         ref={visionRef}
-        className="min-h-[60vh] flex flex-col justify-center items-center relative pt-50 z-10"
+        className="min-h-[80vh] xl:min-h-[120vh] flex flex-col justify-center items-center relative z-10"
       >
         <VisionMissionSection />
       </section>

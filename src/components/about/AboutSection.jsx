@@ -28,13 +28,14 @@ const AboutSection = () => {
       </motion.h2>
 
       <motion.div 
-        className="bg-white p-6 sm:p-8 md:p-12 rounded-2xl shadow-2xl max-w-5xl w-full"
+        className="bg-white p-6 sm:p-8 md:p-12 rounded-2xl shadow-2xl
+                    w-full sm:w-[95%] md:w-[85%] lg:w-[80%] xl:w-[90%] max-w-7xl"
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.8 }}
       >
         <motion.div 
-          className="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0 md:space-x-12"
+          className="flex flex-col xl:flex-row items-center justify-between space-y-6 md:space-y-0 md:space-x-12"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
