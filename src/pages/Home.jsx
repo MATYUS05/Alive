@@ -47,17 +47,18 @@ export default function Home() {
             </span>
           </h2>
           <p
-            className="max-w-xl mt-3 sm:max-w-md mt-4 md:max-w-[420px] mt-3 lg:max-w-xl xl:max-w-3xl
-            text-xs sm:text-sm md:text-sm lg:text-lg xl:text-2xl
-            font-itim leading-relaxed text-[#6B725A]"
+            className="max-w-[230px] mt-0 sm:max-w-[200px] sm:mt-4 md:max-w-[420px] md:mt-3 lg:max-w-[550px] xl:max-w-3xl
+            text-[9px] sm:text-sm md:text-sm lg:text-lg xl:text-2xl
+            font-itim leading-relaxed text-[#6B725A] text-justify"
           >
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati
             quaerat a odit velit. Quibusdam nisi quis, sapiente facilis dolores
-            mollitia corporis tempora, deleniti ut impedit veritatis ex vero
+            mollitia corporis tempsora, deleniti ut impedit veritatis ex vero
             molestiae. Nihil sint aperiam magni incidunt vero nam accusamus
             alias ad corrupti expedita enim aspernatur similique blanditiis
             eligendi sunt inventore, explicabo reiciendis.
           </p>
+
 
           {/* Arrow Button */}
           <button
@@ -84,10 +85,10 @@ export default function Home() {
         {/* Section 2 - Carousel */}
         <section
           ref={carouselRef}
-          className="flex flex-col items-center w-full mt-22 sm:mt-26 md:mt-4 lg:mt-6 xl:mt-54"
+          className="flex flex-col items-center w-full mt-2 sm:mt-26 md:mt-4 lg:mt-16 xl:mt-54"
         >
           {/* Carousel */}
-          <div className="w-full max-w-[260px] sm:max-w-[360px] md:max-w-[360px] lg:max-w-[480px] xl:max-w-[640px] mx-auto px-2 sm:px-4">
+          <div className="w-full max-w-[180px] sm:max-w-[360px] md:max-w-[360px] lg:max-w-[480px] xl:max-w-[640px] mx-auto px-2 sm:px-4">
             <div className="relative w-full aspect-[16/9] overflow-hidden rounded-xl shadow-xl outline outline-1 sm:outline-2 md:outline-4 outline-[#62514F]">
               {slides.map((src, idx) => (
                 <img
@@ -104,9 +105,9 @@ export default function Home() {
 
           {/* Bubble Text */}
           <div
-            className="mt-4 sm:mt-4 px-3 sm:px-6 py-2 
+            className="mt-1 px-1 sm:mt-4 px-3 sm:px-6 py-2 
             bg-[#B0BEA6] font-josefin text-[#47553D] 
-            text-xs sm:text-sm md:text-sm lg:text-xl 
+            text-[8px] sm:text-sm md:text-sm lg:text-xl 
             rounded-lg font-bold z-10 text-center"
           >
             Get to know more about Alive 11.0
@@ -114,9 +115,9 @@ export default function Home() {
 
           {/* CTA Button */}
           <button
-            className="mt-2 sm:mt-2 px-4 sm:px-6 md:px-4 py-2 sm:py-2.5 md:py-2 lg:py-3
+            className="mt-1 px-2 sm:mt-2 px-4 sm:px-6 md:px-4 py-2 sm:py-2.5 md:py-2 lg:py-3
             bg-[#B0BEA6] font-josefin text-[#47553D] 
-            text-sm sm:text-sm md:text-sm lg:text-lg rounded-lg font-bold 
+            text-[8px] sm:text-sm md:text-sm lg:text-lg rounded-lg font-bold 
             hover:scale-105 hover:bg-opacity-90 transition-transform z-10"
           >
             Click Here!
