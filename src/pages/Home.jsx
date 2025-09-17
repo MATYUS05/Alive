@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import OpenWindow from "../assets/HomeAssets/Window.png";
 import Sky from "../assets/HomeAssets/Sky.png";
 import slide1 from "../assets/Logo/Home/car1.JPG";
@@ -13,7 +13,7 @@ export default function Home() {
   const carouselRef = useRef(null);
   const MotionLink = motion(Link);
 
-  // auto Carousel
+  // Auto Carousel
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
@@ -22,33 +22,36 @@ export default function Home() {
   }, [slides.length]);
 
   const scrollToCarousel = () => {
-    carouselRef.current?.scrollIntoView({ behavior: "smooth" });
+    carouselRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   return (
     <div className="relative w-full min-h-screen flex justify-center overflow-hidden">
-      {/* Layer Sky (animated) */}
+      {/* Layer Sky (animated, lebih ringan) */}
       <motion.img
         src={Sky}
         alt="Sky background"
+        loading="lazy"
         className="absolute inset-0 w-full h-[100vh] object-cover
-             min-w-[200%] min-h-[100%] sm:min-w-full"
+                   min-w-[200%] min-h-[100%] sm:min-w-full animated-bg"
         animate={{
-          x: [0, 20, 0],
-          scale: [1.05, 1.08, 1.05],
+          x: [0, 15, 0],
+          scale: [1.02, 1.05, 1.02],
         }}
         transition={{
-          duration: 10,
+          duration: 20,
           repeat: Infinity,
           ease: "easeInOut",
         }}
       />
+
       {/* Open Window bg */}
       <motion.img
         src={OpenWindow}
         alt="Open Window"
+        loading="lazy"
         className="hidden sm:block absolute inset-0 mt-10 w-full min-h-screen h-full object-cover md:object-fill pointer-events-none z-90"
-        initial={{ opacity: 0, scale: 1.1 }}
+        initial={{ opacity: 0, scale: 1.05 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{
           duration: 1.2,
@@ -59,10 +62,10 @@ export default function Home() {
 
       <main className="relative z-10 flex flex-col items-center w-full mt-6 md:mt-8 lg:mt-0 px-4 sm:px-6 md:px-8 pt-8 sm:pt-12 md:pt-16 lg:pt-20">
         {/* Section 1 - Hero */}
-        <section className="mt-10 flex flex-col justify-center items-center w-full text-center max-w-6xl h-screen">
+        <section className="mt-10 flex flex-col justify-center items-center w-full text-center max-w-6xl min-h-screen">
           <motion.h2
             className="font-bold italic font-josefin text-[#617850] drop-shadow-lg leading-tight
-    text-6xl lg:text-7xl xl:text-8xl"
+                       text-6xl lg:text-7xl xl:text-8xl"
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -70,7 +73,7 @@ export default function Home() {
             What Is <br />
             <span
               className="block mt-[-4px] sm:mt-[-6px] md:mt-[-8px] text-[#5C3C38]
-      text-7xl lg:text-8xl xl:text-9xl"
+                         text-7xl lg:text-8xl xl:text-9xl"
             >
               ALIVE?
             </span>
@@ -78,15 +81,15 @@ export default function Home() {
 
           {/* Glassmorphism container */}
           <motion.div
-            className="bg-white/70 backdrop-blur-lg mt-4 p-6 sm:p-8 md:p-12 rounded-2xl shadow-2xl
-             w-full sm:w-[90%] md:w-[70%] lg:w-[55%] xl:w-[65%] max-w-5xl"
+            className="bg-white/80 mt-4 p-6 sm:p-8 md:p-12 rounded-2xl shadow-2xl
+                       w-full sm:w-[90%] md:w-[70%] lg:w-[55%] xl:w-[65%] max-w-5xl"
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
             <p
               className="text-base sm:text-lg md:text-xl
-              leading-relaxed text-[#444B35] text-justify"
+                         leading-relaxed text-[#444B35] text-justify"
             >
               Alive sendiri merupakan kegiatan tahunan yang mengangkat mengenai
               isu-isu kesehatan. Kegiatan ini sendiri berisi edukasi kesehatan
@@ -99,9 +102,9 @@ export default function Home() {
           <motion.button
             onClick={scrollToCarousel}
             className="mt-6 sm:mt-4 p-3 rounded-full 
-             shadow-lg hover:shadow-2xl 
-             transition-all duration-300 flex items-center justify-center
-             border border-gray-300 dark:bg-gray-800"
+                       shadow-lg hover:shadow-2xl 
+                       transition-all duration-300 flex items-center justify-center
+                       border border-gray-300 dark:bg-gray-800"
             whileHover={{ scale: 1.15, y: 4 }}
             whileTap={{ scale: 0.9 }}
           >
@@ -125,8 +128,8 @@ export default function Home() {
         {/* Section 2 - Carousel */}
         <motion.section
           ref={carouselRef}
-          className="flex flex-col items-center w-full h-full sm:min-h-screen 
-             mt-28 sm:mt-16 md:mt-20 lg:mt-24"
+          className="scroll-mt-24 flex flex-col items-center w-full h-full sm:min-h-screen 
+                     mt-28 sm:mt-16 md:mt-20 lg:mt-24"
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -138,29 +141,29 @@ export default function Home() {
             transition={{ duration: 0.4, ease: "easeOut" }}
           >
             <div className="relative w-full aspect-[16/9] overflow-hidden rounded-2xl shadow-2xl border-4 border-[#62514F]/70">
-              {slides.map((src, idx) => (
+              <AnimatePresence mode="wait">
                 <motion.img
-                  key={idx}
-                  src={src}
-                  alt={`Alive slide ${idx + 1}`}
-                  className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
-                    idx === current ? "opacity-100" : "opacity-0"
-                  }`}
-                  initial={{ scale: 1.1 }}
-                  animate={{ scale: idx === current ? 1 : 1.05 }}
+                  key={current}
+                  src={slides[current]}
+                  alt={`Alive slide ${current + 1}`}
+                  loading="lazy"
+                  className="absolute top-0 left-0 w-full h-full object-cover animated-bg"
+                  initial={{ opacity: 0, scale: 1.05 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 1.05 }}
                   transition={{ duration: 1 }}
                 />
-              ))}
+              </AnimatePresence>
             </div>
           </motion.div>
 
           {/* Caption Card */}
           <motion.div
             className="relative mt-4 px-6 py-3
-      bg-white/70 backdrop-blur-md shadow-lg 
-      rounded-xl font-itim text-[#47553D] 
-      text-lg md:text-xl font-semibold
-      text-center"
+                       bg-white/80 shadow-lg 
+                       rounded-xl font-itim text-[#47553D] 
+                       text-lg md:text-xl font-semibold
+                       text-center"
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
           >
@@ -172,11 +175,11 @@ export default function Home() {
           <MotionLink
             to="/About"
             className="mt-3 px-6 md:px-8 py-3 
-    bg-gradient-to-r from-[#B0BEA6] to-[#94A890]
-    font-itim text-[#47553D] 
-    text-lg md:text-xl rounded-xl font-bold shadow-md  
-    hover:scale-110 hover:shadow-xl transition-transform
-    flex items-center justify-center"
+                       bg-gradient-to-r from-[#B0BEA6] to-[#94A890]
+                       font-itim text-[#47553D] 
+                       text-lg md:text-xl rounded-xl font-bold shadow-md  
+                       hover:scale-110 hover:shadow-xl transition-transform
+                       flex items-center justify-center"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
           >

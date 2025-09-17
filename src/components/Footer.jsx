@@ -73,7 +73,7 @@ function Footer() {
             <img
               src={AliveLogo}
               alt="Alive 11.0 Logo"
-              className="w-28 h-28 rounded-full object-cover hover:scale-105 hover:opacity-90 transition-transform transition-opacity"
+              className="w-28 h-28 rounded-full object-cover hover:scale-105 hover:opacity-90 transition-transform"
             />
           </a>
         </div>

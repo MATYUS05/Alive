@@ -63,7 +63,7 @@ function Events() {
 
   return (
     <div
-      className="font-itim w-screen min-h-screen relative pb-40 flex items-center justify-center p-4 md:p-10"
+      className="font-itim w-screen min-h-screen relative pb-40 flex items-center justify-center p-4 md:p-10 overflow-hidden"
       style={{
         backgroundImage: `url(${kayu})`,
         backgroundRepeat: "repeat-y",
@@ -126,7 +126,7 @@ function Events() {
 
       {/* Layout Mobile (Carousel) */}
       <div className="flex flex-col items-center gap-6 w-full max-w-sm md:hidden">
-        <div className="w-[450px] flex items-center justify-center mt-15 md:mt-24">
+        <div className="w-[450px] flex items-center justify-center mt-15 md:mt-24 overflow-x-hidden">
           <img
             key={current}
             src={cardsData[current].flower}
