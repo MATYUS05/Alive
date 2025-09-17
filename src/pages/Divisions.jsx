@@ -66,7 +66,7 @@ function Divisions() {
     <>
       <motion.div
         key="divisions-page"
-        className="font-itim flex flex-col bg-[#382e28] overflow-x-hidden overflow-hidden mt-15 md:mt-0 relative"
+        className="font-itim flex flex-col bg-[#5c3b2e] overflow-x-hidden overflow-hidden mt-15 md:mt-0 relative"
         initial="initial"
         animate="in"
         exit="out"
@@ -88,7 +88,7 @@ function Divisions() {
 
           {/* Sub-teks tambahan */}
           <motion.p
-            className="absolute left-1/2 transform -translate-x-1/2 text-amber-900 font-itim text-base sm:text-lg md:text-xl lg:text-2xl top-24 sm:top-36 md:top-44 lg:top-56 z-30"
+            className="-mt-3 absolute left-1/2 transform -translate-x-1/2 text-amber-900 font-itim text-base sm:text-lg md:text-xl lg:text-2xl top-24 sm:top-36 md:top-44 lg:top-56 z-30"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
