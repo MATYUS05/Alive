@@ -66,7 +66,7 @@ function Divisions() {
     <>
       <motion.div
         key="divisions-page"
-        className="font-itim flex flex-col min-h-screen bg-[#382e28] overflow-x-hidden mt-15 md:mt-0"
+        className="font-itim flex flex-col bg-[#382e28] overflow-x-hidden overflow-hidden mt-15 md:mt-0 relative"
         initial="initial"
         animate="in"
         exit="out"

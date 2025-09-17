@@ -174,7 +174,7 @@ export default function Home() {
           {/* CTA Button */}
           <MotionLink
             to="/About"
-            className="mt-3 px-6 md:px-8 py-3 
+            className="mt-3 mb-10 md:mb-0 px-6 md:px-8 py-3 
                        bg-gradient-to-r from-[#B0BEA6] to-[#94A890]
                        font-itim text-[#47553D] 
                        text-lg md:text-xl rounded-xl font-bold shadow-md  
