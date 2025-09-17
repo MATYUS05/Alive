@@ -125,11 +125,19 @@ export default function Home() {
         {/* Section 2 - Carousel */}
         <motion.section
           ref={carouselRef}
-          className="flex flex-col items-center w-full mt-22 sm:mt-26 md:mt-4 lg:mt-6 xl:mt-54"
+          className="flex flex-col items-center w-full h-full sm:min-h-screen 
+             mt-28 sm:mt-16 md:mt-20 lg:mt-24"
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
         >
           {/* Carousel */}
-          <div className="w-full max-w-[260px] sm:max-w-[360px] md:max-w-[360px] lg:max-w-[480px] xl:max-w-[640px] mx-auto px-2 sm:px-4">
-            <div className="relative w-full aspect-[16/9] overflow-hidden rounded-xl shadow-xl outline outline-1 sm:outline-2 md:outline-4 outline-[#62514F]">
+          <motion.div
+            className="w-full max-w-[380px] sm:max-w-[360px] md:max-w-[480px] xl:max-w-[640px] mx-auto px-2 sm:px-4"
+            whileHover={{ scale: 1.03 }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
+          >
+            <div className="relative w-full aspect-[16/9] overflow-hidden rounded-2xl shadow-2xl border-4 border-[#62514F]/70">
               {slides.map((src, idx) => (
                 <motion.img
                   key={idx}
@@ -146,23 +154,31 @@ export default function Home() {
             </div>
           </motion.div>
 
-          {/* Bubble Text */}
-          <div
-            className="mt-4 sm:mt-4 px-3 sm:px-6 py-2 
-            bg-[#B0BEA6] font-josefin text-[#47553D] 
-            text-xs sm:text-sm md:text-sm lg:text-xl 
-            rounded-lg font-bold z-10 text-center"
+          {/* Caption Card */}
+          <motion.div
+            className="relative mt-4 px-6 py-3
+      bg-white/70 backdrop-blur-md shadow-lg 
+      rounded-xl font-itim text-[#47553D] 
+      text-lg md:text-xl font-semibold
+      text-center"
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
           >
             Get to know more about{" "}
             <span className="text-[#5C3C38]">Alive 11.0</span>
           </motion.div>
 
           {/* CTA Button */}
-          <button
-            className="mt-2 sm:mt-2 px-4 sm:px-6 md:px-4 py-2 sm:py-2.5 md:py-2 lg:py-3
-            bg-[#B0BEA6] font-josefin text-[#47553D] 
-            text-sm sm:text-sm md:text-sm lg:text-lg rounded-lg font-bold 
-            hover:scale-105 hover:bg-opacity-90 transition-transform z-10"
+          <MotionLink
+            to="/About"
+            className="mt-3 px-6 md:px-8 py-3 
+    bg-gradient-to-r from-[#B0BEA6] to-[#94A890]
+    font-itim text-[#47553D] 
+    text-lg md:text-xl rounded-xl font-bold shadow-md  
+    hover:scale-110 hover:shadow-xl transition-transform
+    flex items-center justify-center"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
           >
             Click Here!
           </MotionLink>
