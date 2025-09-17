@@ -1,0 +1,34 @@
+.animated-logo-text {
+  background: linear-gradient(
+    90deg,
+    #F8C4A3,
+    #8bc34a,   
+    #F3EFEA
+       
+  );
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: logoColorSlide 4s linear infinite;
+}
+
+@keyframes logoColorSlide {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+
+@keyframes gradient-move {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.nav-gradient-animate {
+  background: linear-gradient(-45deg, #4E342E, #795548, #4E342E, #6D4C41);
+  background-size: 400% 400%;
+  animation: gradient-move 10s ease infinite;
+}

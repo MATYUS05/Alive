@@ -1,120 +1,78 @@
-import React from "react";
-import canvas from "../assets/Ticket/banner.png"; // poster
-import bg from "../assets/Ticket/bg.png";        // background
-import rectagle from "../assets/Ticket/Rectangle 26.png"
-import calendar from "../assets/Ticket/calendar.svg"
-import location from "../assets/Ticket/location.svg"
-import "../styles/ticket.css"
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import bg from "../assets/Ticket/bg.png"; // background
 
 export default function TicketPage() {
+  const eventDate = new Date("2025-10-01T09:00:00");
+  const [timeLeft, setTimeLeft] = useState(getTimeRemaining());
+
+  function getTimeRemaining() {
+    const now = new Date();
+    const total = eventDate - now;
+    const days = Math.floor(total / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((total / 1000 / 60) % 60);
+    const seconds = Math.floor((total / 1000) % 60);
+    return { total, days, hours, minutes, seconds };
+  }
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(getTimeRemaining());
+    }, 1000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
-    <>
-
-      <div
-        className="w-full min-h-screen flex justify-center items-start font-josefinn"
-        style={{
-          backgroundImage: `url(${bg})`,
-          backgroundSize: "cover",     // fills screen
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
-        <div className="relative w-full max-w-[1200px] mt-8">
-          <img
-            src={canvas}
-            alt="Poster Banner"
-            className="w-full h-auto"
-          />
-
-          <p
-            className="absolute font-bold text-center"
-            style={{
-              top: "20%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              fontSize: "clamp(12px, 4vw, 48px)",
-              color: '#62514F'
-
-            }}
-          >
-            Pemesanan tiket
-            <br></br>
-            Talk Show Alive 11.0
-            <br></br>
-            "MIND"
-          </p>
-
-          <img
-            src={rectagle}
-            alt="Poster Element"
-            className="absolute"
-            style={{
-              top: "27%", // relative to poster height
-              left: "50%", // center horizontally
-              transform: "translateX(-50%)",
-              width: "clamp(100px, 40vw, 500px)", // responsive scaling
-            }}
-          />
-
-          {/* Div below the rectangle */}
-          <div
-            className="absolute text-left"
-            style={{
-              top: "58%",           // adjust a bit below the rectangle
-              left: "50%",
-              transform: "translateX(-50%)",
-              width: "clamp(100px, 40vw, 500px)", // match rectangle width
-              fontSize: "clamp(8px, 2vw, 24px)",
-            }}
-          >
-            <p className="flex items-center mb-2">
-              <img
-                src={calendar}
-                alt="icon"
-                className="mr-2"
-                style={{ width: "clamp(16px, 2vw, 24px)", height: "auto" }}
-              />
-              Senin 1, Agustus 2025
-            </p>
-            <p className="flex items-center">
-              <img
-                src={location}
-                alt="icon"
-                className="mr-2"
-                style={{ width: "clamp(16px, 2vw, 24px)", height: "auto" }}
-              />
-              UMN
-            </p>
-          </div>
-
-          <p
-            className="absolute font-bold text-center"
-            style={{
-              top: "66%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              fontSize: "clamp(12px, 4vw, 48px)",
-              color: '#47553D'
-            }}
-          >
-            Save A Seat Now!
-          </p>
-
-          <button
-            className="absolute px-4 py-2 rounded shadow-lg text-[#47553D] bg-[#B0BEA6] hover:bg-[#98AA8F]"
-            style={{
-              top: "72%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              fontSize: "clamp(12px, 4vw, 48px)",
-            }}
-          >
-            Click Here
-          </button>
-
+    <div
+      className="w-full min-h-screen flex justify-center items-center font-josefinn p-4"
+      style={{
+        backgroundImage: `url(${bg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      {timeLeft.total > 0 ? (
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 w-full max-w-4xl text-center justify-items-center">
+          <CountdownBox value={timeLeft.days} label="Days" />
+          <CountdownBox value={timeLeft.hours} label="Hours" />
+          <CountdownBox value={timeLeft.minutes} label="Minutes" />
+          <CountdownBox value={timeLeft.seconds} label="Seconds" />
         </div>
-      </div>
-    </>
+      ) : (
+        <p className="text-4xl md:text-6xl font-bold text-white">
+          Event Started!
+        </p>
+      )}
+    </div>
   );
 }
 
+function CountdownBox({ value, label }) {
+  return (
+    <div
+      className="
+        bg-white text-black rounded-2xl shadow-xl
+        flex flex-col justify-center items-center
+        w-32 h-32 md:w-40 md:h-40
+        transition-all duration-300 ease-in-out
+        hover:scale-105 hover:shadow-2xl
+      "
+    >
+      <AnimatePresence mode="wait">
+        <motion.p
+          key={value} // supaya tiap value baru di-animate
+          initial={{ scale: 0.5, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          exit={{ scale: 1.2, opacity: 0 }}
+          transition={{ duration: 0.3, type: "spring" }}
+          className="text-4xl md:text-5xl font-bold"
+        >
+          {value}
+        </motion.p>
+      </AnimatePresence>
+      <span className="text-base md:text-lg font-medium">{label}</span>
+    </div>
+  );
+}

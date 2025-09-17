@@ -24,6 +24,7 @@ const divisionPositions = [
   { top: "81.3%", left: "37.8%" },
   { top: "81.3%", left: "69.76%" },
 ];
+
 const pageVariants = {
   initial: { opacity: 0 },
   in: { opacity: 1, transition: { duration: 0.5 } },
@@ -49,7 +50,9 @@ const logoVariants = {
 function Divisions() {
   const [hoveredDivisionId, setHoveredDivisionId] = useState(null);
   const [selectedDivision, setSelectedDivision] = useState(null);
-  const isDesktop = useMediaQuery("(min-width: 768px)");
+
+  // Ganti jadi cek di atas 1024px
+  const isLargeScreen = useMediaQuery("(min-width: 1025px)");
 
   const handleSelectDivision = (division) => {
     if (selectedDivision?.id === division.id) {
@@ -63,18 +66,19 @@ function Divisions() {
     <>
       <motion.div
         key="divisions-page"
-        className="font-itim flex flex-col min-h-screen bg-[#382e28]"
+        className="font-itim flex flex-col min-h-screen bg-[#382e28] overflow-x-hidden mt-15 md:mt-0"
         initial="initial"
         animate="in"
         exit="out"
         variants={pageVariants}
       >
         <motion.div
-          className="relative w-full"
+          className="relative w-full overflow-x-hidden"
           variants={containerVariants}
           initial="hidden"
           animate="show"
         >
+          {/* Judul utama */}
           <motion.h1
             className="absolute left-1/2 transform -translate-x-1/2 text-brown font-josefin font-bold text-2xl sm:text-4xl md:text-4xl lg:text-6xl top-15 sm:top-25 md:top-30 lg:top-40 text-amber-900 z-30"
             variants={titleVariants}
@@ -82,6 +86,17 @@ function Divisions() {
             Our Divisions
           </motion.h1>
 
+          {/* Sub-teks tambahan */}
+          <motion.p
+            className="absolute left-1/2 transform -translate-x-1/2 text-amber-900 font-itim text-base sm:text-lg md:text-xl lg:text-2xl top-24 sm:top-36 md:top-44 lg:top-56 z-30"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6, duration: 0.8 }}
+          >
+            Try to hover / tap us
+          </motion.p>
+
+          {/* Dekorasi bunga */}
           <motion.img
             src={FlowerBlue}
             alt="Blue Flower"
@@ -98,7 +113,6 @@ function Divisions() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.5, duration: 1, ease: "easeOut" }}
           />
-
           <motion.img
             src={FlowerYellow}
             alt="Yellow Flower"
@@ -116,6 +130,7 @@ function Divisions() {
             transition={{ delay: 0.5, duration: 1, ease: "easeOut" }}
           />
 
+          {/* Background rak + awan */}
           <div className="relative w-full h-auto">
             <img
               src={Background}
@@ -129,6 +144,7 @@ function Divisions() {
             />
           </div>
 
+          {/* Logo divisi */}
           {divisions.map((division, index) => {
             const position = divisionPositions[index];
             if (!position) return null;
@@ -146,20 +162,22 @@ function Divisions() {
                 style={{ top: position.top, left: position.left, width: "23%" }}
                 variants={logoVariants}
                 onHoverStart={() =>
-                  isDesktop && setHoveredDivisionId(division.id)
+                  isLargeScreen && setHoveredDivisionId(division.id)
                 }
-                onHoverEnd={() => isDesktop && setHoveredDivisionId(null)}
+                onHoverEnd={() => isLargeScreen && setHoveredDivisionId(null)}
               >
                 <motion.img
                   src={division.image}
                   alt={division.name}
                   className="w-full h-auto object-contain drop-shadow-[0_10px_8px_rgba(0,0,0,0.4)] cursor-pointer relative z-30"
-                  onClick={() => !isDesktop && handleSelectDivision(division)}
+                  onClick={() =>
+                    !isLargeScreen && handleSelectDivision(division)
+                  }
                   whileHover={{ scale: 1.1, y: -10 }}
                   whileTap={{ scale: 0.95 }}
                 />
                 <AnimatePresence>
-                  {isDesktop && isHovered && (
+                  {isLargeScreen && isHovered && (
                     <DivisionInfoBox
                       division={division}
                       logoPosition={logoPosition}
@@ -172,8 +190,9 @@ function Divisions() {
         </motion.div>
       </motion.div>
 
+      {/* Modal untuk layar kecil */}
       <AnimatePresence>
-        {!isDesktop && selectedDivision && (
+        {!isLargeScreen && selectedDivision && (
           <motion.div
             key="modal-backdrop"
             className="fixed inset-0 flex justify-center items-center z-50 bg-black/60 p-4"

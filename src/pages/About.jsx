@@ -61,11 +61,11 @@ export default function About() {
   }, [cloudLeftControls, cloudRightControls, cloudLeftBackControls, cloudRightBackControls]);
 
   return (
-    <div className="w-full h-full scroll-smooth relative" style={pageStyle}>
+    <div className="font-itim w-full h-full scroll-smooth relative overflow-x-hidden" style={pageStyle}>
       <motion.img
         src={Cloud3}
         alt="Back Cloud Left" 
-        className="cloud-left-back" 
+        className="cloud-left-back pointer-events-none absolute"
         initial={{ x: '-100%' }} 
         animate={cloudLeftBackControls} 
       />
@@ -73,7 +73,7 @@ export default function About() {
       <motion.img
         src={Cloud4}
         alt="Back Cloud Right" 
-        className="cloud-right-back" 
+        className="cloud-right-back pointer-events-none absolute"
         initial={{ x: '100%' }} 
         animate={cloudRightBackControls} 
       />
@@ -81,7 +81,7 @@ export default function About() {
       <motion.img
         src={Cloud2}
         alt="Front Cloud Left" 
-        className="cloud-left" 
+        className="cloud-left pointer-events-none absolute"
         initial={{ x: '-100%' }} 
         animate={cloudLeftControls} 
       />
@@ -89,7 +89,7 @@ export default function About() {
       <motion.img
         src={Cloud1}
         alt="Front Cloud Right" 
-        className="cloud-right" 
+        className="cloud-right pointer-events-none absolute"
         initial={{ x: '100%' }} 
         animate={cloudRightControls} 
       />

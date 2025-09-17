@@ -21,8 +21,8 @@ const MissionCard = ({ title, text, className, initialX, delay }) => {
 };
 
 const VisionMissionSection = () => {
-  const visionText = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati quaerat a odit velit. Quibusdam nisi quis, +sapiente facilis dolores mollitia corporis tempora, deleniti ut impedit veritatis ex vero molestiae.";
-  const missionText = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati quaerat a odit velit. Quibusdam nisi quis, sapiente facilis dolores mollitia corporis tempora, deleniti ut impedit veritatis ex vero molestiae.";
+  const visionText = "Building Resilience, Fostering Hope atau Membangun Ketahanan, Menumbuhkan Harapan. Visi ini bertujuan untuk memberikan nilai kepada seluruh peserta agar terus membangun dan menjaga ketahanan diri, serta menanamkan harapan positif untuk masa depan, khususnya dalam menghadapi tantangan di dunia perkuliahan.";
+  const missionText = "Meningkatkan kesadaran dan pengetahuan tentang kesehatan mental bagi mahasiswa Universitas Multimedia Nusantara melalui edukasi pengelolaan stres, pola pikir positif (growth mindset), dan pembangunan self-image yang sehat, serta membangun citra positif UMN dan UMN Medical Center sebagai institusi yang peduli pada kesehatan mental.";
 
   return (
     <div className="px-4 sm:px-10 md:px-20 lg:px-32">

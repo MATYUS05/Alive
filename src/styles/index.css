@@ -1,18 +1,111 @@
 @import "tailwindcss";
 
 @layer base {
-  @import url('https://fonts.googleapis.com/css2?family=Itim&family=Josefin+Sans:wght@400;700&display=swap');
+  @import url("https://fonts.googleapis.com/css2?family=Itim&family=Josefin+Sans:wght@400;700&display=swap");
 
   .font-itim {
-    font-family: 'Itim', cursive;
+    font-family: "Itim", cursive;
   }
 
   .font-josefin {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: "Josefin Sans", sans-serif;
   }
 }
 
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient-move {
+  background-size: 200% 200%;
+  animation: gradient-move 10s ease infinite;
+}
+
+@keyframes gradient-x {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient-x {
+  background-size: 200% 200%;
+  animation: gradient-x 5s ease infinite;
+}
+
+@layer utilities {
+  @keyframes typing-rest {
+    0% {
+      width: 0ch;
+    }
+    50% {
+      width: 8ch;
+    }
+    100% {
+      width: 0ch;
+    }
+  }
+
+  @keyframes typing-mind {
+    0% {
+      width: 0ch;
+    }
+    50% {
+      width: 8ch;
+    }
+    100% {
+      width: 0ch;
+    }
+  }
+
+  .typing-effect-rest {
+    @apply inline-block overflow-hidden whitespace-nowrap border-r-2;
+    animation: typing-rest 4s steps(8) infinite;
+  }
+
+  .typing-effect-mind {
+    @apply inline-block overflow-hidden whitespace-nowrap border-r-2;
+    animation: typing-mind 4s steps(8) infinite;
+  }
+}
+
+.wave-container {
+  display: inline-block;
+}
+
+.wave-char {
+  display: inline-block;
+  animation-name: wave-animation;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes wave-animation {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }

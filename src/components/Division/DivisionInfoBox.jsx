@@ -1,5 +1,3 @@
-// File: DivisionInfoBox.jsx (Versi Final yang Sudah Diperbaiki)
-
 import React from "react";
 import { motion } from "framer-motion";
 
