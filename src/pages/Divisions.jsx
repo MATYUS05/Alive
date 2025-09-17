@@ -4,7 +4,7 @@ import Background from "../assets/DivisionAssets/shelf.png";
 import { motion, AnimatePresence } from "framer-motion";
 import { DivisionInfoBox } from "../components/Division/DivisionInfoBox";
 import { useMediaQuery } from "../components/Division/useMediaQuery";
-import Awan from "../assets/DivisionAssets/Awan2.PNG";
+import Awan from "../assets/DivisionAssets/Awan2.png";
 import FlowerBlue from "../assets/DivisionAssets/FlowerBlue.png";
 import FlowerYellow from "../assets/DivisionAssets/FlowerYellow.png";
 import FlowerPurple from "../assets/DivisionAssets/FlowerPurple.png";
