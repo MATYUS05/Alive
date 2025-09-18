@@ -11,28 +11,13 @@ function Footer() {
         {/* Quick Links */}
         <div className="flex flex-col items-center md:items-start w-full md:w-1/3">
           <span className="font-semibold text-lg tracking-wide mb-3">
-            Quick Links
+            Universitas Multimedia Nusantara
           </span>
-          <div className="grid grid-cols-3 gap-x-6 gap-y-2 text-center md:text-left">
-            <Link to="/Home" className="hover:text-[#B0BEA6] transition-colors">
-              Home
-            </Link>
-            <Link to="/About" className="hover:text-[#B0BEA6] transition-colors">
-              About
-            </Link>
-            <Link to="/Events" className="hover:text-[#B0BEA6] transition-colors">
-              Events
-            </Link>
-            <Link to="/Divisions" className="hover:text-[#B0BEA6] transition-colors">
-              Divisions
-            </Link>
-            <Link to="/Tickets" className="hover:text-[#B0BEA6] transition-colors">
-              Tickets
-            </Link>
-            <Link to="/Games" className="hover:text-[#B0BEA6] transition-colors">
-              Games
-            </Link>
-            
+          <div className="text-center md:text-left space-y-1 text-sm">
+            <p>Jl. Scientia Boulevard, Gading Serpong</p>
+            <p>Tangerang, Banten - 15811 Indonesia</p>
+            <p>(t) +62-21.5422.0808</p>
+            <p>(f) +62-21.5422.0800</p>
           </div>
         </div>
 
@@ -84,7 +69,7 @@ function Footer() {
 
       {/* Bottom Text */}
       <p className="text-center text-sm text-gray-300">
-        © {new Date().getFullYear()} Alive 11.0 — Universitas Multimedia Nusantara
+        © {new Date().getFullYear()} Alive 11.0
       </p>
     </footer>
   );

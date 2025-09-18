@@ -66,7 +66,7 @@ export default function Home() {
         src={OpenWindow}
         alt="Open Window"
         loading="lazy"
-        className="hidden sm:block absolute inset-0 mt-10 w-full min-h-screen h-full object-cover md:object-fill pointer-events-none z-50"
+        className="hidden sm:block absolute inset-0 mt-10 w-full min-h-screen h-full object-cover lg:object-fill pointer-events-none z-50"
         initial={{ opacity: 0, scale: 1.05 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{
