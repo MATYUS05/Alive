@@ -66,7 +66,7 @@ export default function Home() {
         src={OpenWindow}
         alt="Open Window"
         loading="lazy"
-        className="hidden sm:block absolute inset-0 mt-10 w-full min-h-screen h-full object-cover md:object-fill pointer-events-none"
+        className="hidden sm:block absolute inset-0 mt-10 w-full min-h-screen h-full object-cover md:object-fill pointer-events-none z-50"
         initial={{ opacity: 0, scale: 1.05 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{
@@ -98,7 +98,7 @@ export default function Home() {
 
           {/* Glassmorphism container */}
           <motion.div
-            className="bg-white/80 mt-4 p-6 sm:p-8 md:p-12 rounded-2xl shadow-2xl
+            className="font-itim bg-white/80 mt-4 p-6 sm:p-8 md:p-12 rounded-2xl shadow-2xl
                        w-full sm:w-[90%] md:w-[70%] lg:w-[55%] xl:w-[65%] max-w-5xl"
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -143,7 +143,7 @@ export default function Home() {
         <motion.section
           ref={carouselRef}
           className="scroll-mt-24 flex flex-col items-center w-full h-full sm:min-h-screen 
-                     mt-28 sm:mt-16 md:mt-20 lg:mt-24"
+                     mt-28 sm:mt-16 md:mt-20 lg:mt-24 z-10"
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -154,7 +154,7 @@ export default function Home() {
             whileHover={{ scale: 1.03 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
           >
-            <div className="relative w-full aspect-[16/9] overflow-hidden rounded-2xl shadow-2xl border-4 border-[#62514F]/70">
+            <div className="relative w-full aspect-[16/9] overflow-hidden rounded-lg shadow-2xl border-4 border-[#6D4C41]/70">
               <AnimatePresence>
                 <motion.img
                   key={current}
@@ -193,7 +193,7 @@ export default function Home() {
           {/* CTA Button */}
           <MotionLink
             to="/About"
-            className="mt-3 mb-10 md:mb-0 px-6 md:px-8 py-3 
+            className="mt-3 mb-10 md:mb-6 px-6 md:px-8 py-3 
                        bg-gradient-to-r from-[#B0BEA6] to-[#94A890]
                        font-itim text-[#47553D] 
                        text-lg md:text-xl rounded-xl font-bold shadow-md  

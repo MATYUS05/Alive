@@ -499,7 +499,7 @@ function Games() {
       >
         <motion.h1
           variants={itemVariants}
-          className="text-3xl sm:text-4xl md:text-5xl mb-2 mt-20 text-[#5d3f2d] font-bold"
+          className="text-3xl sm:text-4xl md:text-5xl mb-2 mt-20 text-[#6D4C41] font-bold"
         >
           {titleText.split("").map((char, index) => (
             <span
