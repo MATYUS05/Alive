@@ -7,7 +7,7 @@ function Footer() {
   return (
     <footer className="bg-[#5D4037] text-white font-josefin pt-12 pb-6">
       {/* Top Section */}
-      <div className="container mx-auto px-8 flex flex-col md:flex-row items-start justify-between gap-10 md:gap-0">
+      <div className="font-itim container mx-auto px-8 flex flex-col md:flex-row items-start justify-between gap-10 md:gap-0">
         {/* Quick Links */}
         <div className="flex flex-col items-center md:items-start w-full md:w-1/3">
           <span className="font-semibold text-lg tracking-wide mb-3">
