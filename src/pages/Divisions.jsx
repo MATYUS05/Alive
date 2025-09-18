@@ -51,7 +51,6 @@ function Divisions() {
   const [hoveredDivisionId, setHoveredDivisionId] = useState(null);
   const [selectedDivision, setSelectedDivision] = useState(null);
 
-  // Ganti jadi cek di atas 1024px
   const isLargeScreen = useMediaQuery("(min-width: 1025px)");
 
   const handleSelectDivision = (division) => {

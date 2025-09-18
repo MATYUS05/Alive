@@ -102,7 +102,7 @@ function Navbar() {
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
-            transition={{ type: "spring", stiffness: 120, damping: 14 }}
+            transition={{ type: "tween", duration: 0.4, ease: "easeInOut" }}
             className="fixed inset-y-0 right-0 h-full w-4/5 max-w-sm bg-gradient-to-b from-[#4E342E] via-[#6D4C41] to-[#4E342E] shadow-lg z-99"
           >
             <div className="flex justify-end p-4">

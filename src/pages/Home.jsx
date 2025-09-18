@@ -13,7 +13,22 @@ export default function Home() {
   const carouselRef = useRef(null);
   const MotionLink = motion(Link);
 
-  // Auto Carousel
+  const slideVariants = {
+    enter: {
+      x: "100%", 
+      opacity: 0,
+    },
+    center: {
+      x: 0, 
+      opacity: 1,
+    },
+    exit: {
+      x: "-100%", 
+      opacity: 0,
+    },
+  };
+
+  // Logika untuk auto-carousel
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
@@ -21,36 +36,37 @@ export default function Home() {
     return () => clearInterval(interval);
   }, [slides.length]);
 
+  // Fungsi untuk scroll ke section carousel
   const scrollToCarousel = () => {
     carouselRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   return (
     <div className="relative w-full min-h-screen flex justify-center overflow-hidden">
-      {/* Layer Sky (animated, lebih ringan) */}
+      {/* Layer 1: Animated Sky Background (Fixed for mobile) */}
       <motion.img
         src={Sky}
         alt="Sky background"
         loading="lazy"
-        className="absolute inset-0 w-full h-[100vh] object-cover
-                   min-w-[200%] min-h-[100%] sm:min-w-full animated-bg"
+        className="absolute inset-0 w-full h-full object-cover 
+                   min-w-[210%] left-[-5%] sm:min-w-full sm:left-0 animated-bg"
         animate={{
           x: [0, 15, 0],
           scale: [1.02, 1.05, 1.02],
         }}
         transition={{
-          duration: 20,
+          duration: 10,
           repeat: Infinity,
           ease: "easeInOut",
         }}
       />
 
-      {/* Open Window bg */}
+      {/* Layer 2: Open Window Image */}
       <motion.img
         src={OpenWindow}
         alt="Open Window"
         loading="lazy"
-        className="hidden sm:block absolute inset-0 mt-10 w-full min-h-screen h-full object-cover md:object-fill pointer-events-none z-90"
+        className="hidden sm:block absolute inset-0 mt-10 w-full min-h-screen h-full object-cover md:object-fill pointer-events-none"
         initial={{ opacity: 0, scale: 1.05 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{
@@ -60,7 +76,8 @@ export default function Home() {
         }}
       />
 
-      <main className="relative z-10 flex flex-col items-center w-full mt-6 md:mt-8 lg:mt-0 px-4 sm:px-6 md:px-8 pt-8 sm:pt-12 md:pt-16 lg:pt-20">
+      {/* Main Content */}
+      <main className="relative z-10 flex flex-col items-center w-full md:mt-8 lg:mt-0 px-4 sm:px-6 md:px-8 sm:pt-12 md:pt-16 lg:pt-20">
         {/* Section 1 - Hero */}
         <section className="mt-10 flex flex-col justify-center items-center w-full text-center max-w-6xl min-h-screen">
           <motion.h2
@@ -87,10 +104,7 @@ export default function Home() {
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
-            <p
-              className="text-base sm:text-lg md:text-xl
-                         leading-relaxed text-[#444B35] text-justify"
-            >
+            <p className="text-base sm:text-lg md:text-xl leading-relaxed text-[#444B35] text-justify">
               Alive sendiri merupakan kegiatan tahunan yang mengangkat mengenai
               isu-isu kesehatan. Kegiatan ini sendiri berisi edukasi kesehatan
               yang dapat menjadi sarana menyebarkan dan meningkatkan kesadaran
@@ -141,17 +155,22 @@ export default function Home() {
             transition={{ duration: 0.4, ease: "easeOut" }}
           >
             <div className="relative w-full aspect-[16/9] overflow-hidden rounded-2xl shadow-2xl border-4 border-[#62514F]/70">
-              <AnimatePresence mode="wait">
+              <AnimatePresence>
                 <motion.img
                   key={current}
                   src={slides[current]}
                   alt={`Alive slide ${current + 1}`}
                   loading="lazy"
-                  className="absolute top-0 left-0 w-full h-full object-cover animated-bg"
-                  initial={{ opacity: 0, scale: 1.05 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 1.05 }}
-                  transition={{ duration: 1 }}
+                  className="absolute top-0 left-0 w-full h-full object-cover"
+                  variants={slideVariants}
+                  initial="enter"
+                  animate="center"
+                  exit="exit"
+                  transition={{
+                    type: "tween",
+                    duration: 1.2,
+                    ease: "easeInOut",
+                  }}
                 />
               </AnimatePresence>
             </div>

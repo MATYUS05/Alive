@@ -63,7 +63,7 @@ function Events() {
 
   return (
     <div
-      className="font-itim w-screen min-h-screen relative pb-40 flex items-center justify-center p-4 md:p-10 overflow-hidden"
+      className="font-itim w-screen min-h-screen relative pb-40 flex items-center justify-center p-4 md:p-10 overflow-hidden scroll-smooth"
       style={{
         backgroundImage: `url(${kayu})`,
         backgroundRepeat: "repeat-y",
