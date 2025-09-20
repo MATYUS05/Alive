@@ -60,7 +60,7 @@ function Opening() {
 
       {/* 🔹 Tombol bubble utama */}
       <motion.p
-        className="absolute top-[67%] left-1/2 -translate-x-1/2 
+        className="font-itim absolute top-[67%] left-1/2 -translate-x-1/2 
              inline-block text-center 
              text-[clamp(18px,3vw,36px)]   
              md:text-[clamp(22px,3.5vw,40px)] 

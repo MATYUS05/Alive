@@ -15,7 +15,7 @@ import Sol from "../assets/AboutAssets/Sol.png";
 // --- Konfigurasi Game ---
 const PLAYER_WIDTH = 50,
   PLAYER_HEIGHT = 50,
-  PLAYER_STEP = 5,
+  PLAYER_STEP = 7,
   SLIDING_BLOCK_WIDTH_DESKTOP = 120,
   SLIDING_BLOCK_HEIGHT_DESKTOP = 40,
   FALLING_BLOCK_WIDTH_DESKTOP = 100,
