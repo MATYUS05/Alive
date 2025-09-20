@@ -9,8 +9,8 @@ function Opening() {
   return (
     <motion.div
       className="relative w-screen h-screen overflow-hidden"
-      initial={{ opacity: 0, scale: 1.05 }}   
-      animate={{ opacity: 1, scale: 1 }}      
+      initial={{ opacity: 0, scale: 1.05 }}
+      animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 1, ease: "easeOut" }}
     >
       {/* 🔹 Background sky bergerak */}
@@ -36,12 +36,13 @@ function Opening() {
       {/* 🔹 Judul WELCOME! */}
       <motion.h1
         className="absolute inset-x-0 
-                   top-[25%] md:top-[22%] lg:top-[18%] 
-                   text-center 
-                   text-[clamp(95px,12vw,200px)] 
-                   font-extrabold leading-tight
-                   text-white drop-shadow-[0_0_40px_rgba(0,140,255,1)] 
-                   z-20 px-4"
+             top-[25%] md:top-[22%] lg:top-[18%] 
+             text-center 
+             text-[clamp(60px,10vw,120px)]  
+             font-extrabold leading-tight
+             text-white                       
+             drop-shadow-[0_0_40px_#617850]   
+             z-20 px-4"
         initial={{ opacity: 0, y: -40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.6, ease: "easeOut" }}
@@ -60,15 +61,16 @@ function Opening() {
       {/* 🔹 Tombol bubble utama */}
       <motion.p
         className="absolute top-[67%] left-1/2 -translate-x-1/2 
-                   inline-block text-center 
-                   text-[clamp(25px,4vw,60px)] md:text-[clamp(40px,5vw,50px)] 
-                   font-extrabold 
-                   bg-blue-400 px-6 md:px-8 py-3 md:py-2 
-                   shadow-2xl cursor-pointer text-white
-                   transition duration-300 hover:bg-blue-500 
-                   z-20 subtle-text 
-                   whitespace-normal md:whitespace-nowrap 
-                   leading-snug max-w-[95vw] md:max-w-[85vw]"
+             inline-block text-center 
+             text-[clamp(18px,3vw,36px)]   
+             md:text-[clamp(22px,3.5vw,40px)] 
+             font-extrabold 
+             bg-[#617850] px-6 md:px-8 py-3 md:py-2 
+             shadow-2xl cursor-pointer text-white
+             transition duration-300 hover:bg-[#4e6240]  
+             z-20 subtle-text 
+             whitespace-normal md:whitespace-nowrap 
+             leading-snug max-w-[95vw] md:max-w-[85vw]"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 1, ease: "easeOut" }}
@@ -79,15 +81,15 @@ function Opening() {
       {/* 🔹 Hint bubble */}
       <motion.p
         className="bubble absolute top-[60%] md:top-[58%] left-1/2 -translate-x-7
-                   bg-blue-500 font-bold 
-                   text-[clamp(16px,3.5vw,32px)] 
-                   px-6 md:px-9 py-3 md:py-4 
-                   shadow-xl cursor-pointer z-20 
-                   subtle-text text-white
-                   whitespace-nowrap
-                   before:content-[''] before:absolute before:top-full before:left-1/2 
-                   before:-translate-x-1/2 before:border-8 before:border-transparent 
-                   before:border-t-blue-500 hover:bg-blue-400"
+             bg-[#617850] font-bold 
+             text-[clamp(16px,3.5vw,32px)] 
+             px-6 md:px-9 py-3 md:py-4 
+             shadow-xl cursor-pointer z-20 
+             subtle-text text-white
+             whitespace-nowrap
+             before:content-[''] before:absolute before:top-full before:left-1/2 
+             before:-translate-x-1/2 before:border-8 before:border-transparent 
+             before:border-t-[#617850] hover:bg-[#4e6240]"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 1.3, ease: "easeOut" }}
