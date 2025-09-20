@@ -5,7 +5,7 @@ export const cardsData = [
   {
     title: "R_E_S_T_",
     color: "bg-amber-200",
-    date: "01/07/2025",
+    date: "10/11/2025",
     text: `REST: Rechecking Emotional State Station
     
     REST Station merupakan rangkaian pertama Alive 11.0 yang akan dilaksanakan pada tanggal 10–12 November di lobby Gedung D. 
@@ -29,7 +29,7 @@ Rest Station terdiri dari 4 booth interaktif:
   {
     title: "M_I_N_D_",
     color: "bg-lime-200",
-    date: "05/07/2025",
+    date: "12/11/2025",
     text: `MIND: Manifesting Your Inner-Health Education
     
     Mind merupakan puncak rangkaian Alive 11.0. Mind merupakan talkshow yang akan dilaksanakan pada tanggal 12 November 2025 di Lecture Theatre Universitas Multimedia Nusantara`,
