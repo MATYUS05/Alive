@@ -94,7 +94,7 @@ function Events() {
             >
               <div className="transition-transform duration-500 ease-in-out group-hover:scale-105">
                 <h2
-                  className={`${card.titleColor} text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-widest text-center mb-8 md:mt-24`}
+                  className={`${card.titleColor} font-josefin text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-widest text-center mb-8 md:mt-24`}
                 >
                   {card.title === "R_E_S_T_" ? (
                     <span className="typing-effect-rest">{card.title}</span>

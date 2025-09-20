@@ -35,7 +35,7 @@ function Opening() {
 
       {/* 🔹 Judul WELCOME! */}
       <motion.h1
-        className="absolute inset-x-0 
+        className="font-josefin absolute inset-x-0 
              top-[25%] md:top-[22%] lg:top-[18%] 
              text-center 
              text-[clamp(60px,10vw,120px)]  
@@ -80,7 +80,7 @@ function Opening() {
 
       {/* 🔹 Hint bubble */}
       <motion.p
-        className="bubble absolute top-[60%] md:top-[58%] left-1/2 -translate-x-7
+        className="font-itim bubble absolute top-[60%] md:top-[58%] left-1/2 -translate-x-7
              bg-[#617850] font-bold 
              text-[clamp(16px,3.5vw,32px)] 
              px-6 md:px-9 py-3 md:py-4 
