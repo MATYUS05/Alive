@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 import SkyBackground from "../assets/HomeAssets/Sky.png";
 import Seed from "../assets/AboutAssets/Seed.png";
 import Shui from "../assets/AboutAssets/Shui.png";
-import Sol from "../assets/AboutAssets/Sol.png";
+import Sol from "../assets/Logo/Character/Sol.png";
 
 // --- Konfigurasi Game ---
 const PLAYER_WIDTH = 50,
@@ -21,7 +21,7 @@ const PLAYER_WIDTH = 50,
   FALLING_BLOCK_WIDTH_DESKTOP = 100,
   FALLING_BLOCK_HEIGHT_DESKTOP = 50,
   INITIAL_BLOCK_SPEED = 5,
-  SLIDING_SPAWN_RATE = 1500,
+  SLIDING_SPAWN_RATE = 2000,
   FALLING_SPAWN_RATE = 1000,
   GRAVITY = 1,
   JUMP_STRENGTH = -15,

@@ -9,44 +9,40 @@ function Opening() {
   return (
     <motion.div
       className="relative w-screen h-screen overflow-hidden"
-      // Kontainer utama mengendalikan animasi fade-in dan scale up
-      initial={{ opacity: 0, scale: 1.05 }} // Dimulai agak besar dan transparan
-      animate={{ opacity: 1, scale: 1 }}    // Bergerak ke ukuran normal dan muncul penuh
-      transition={{ duration: 1.5, ease: "easeOut" }} // Animasi smooth selama 1.5 detik
+      initial={{ opacity: 0, scale: 1.05 }} 
+      animate={{ opacity: 1, scale: 1 }}    
+      transition={{ duration: 1.5, ease: "easeOut" }} 
     >
-      {/* 🔹 Background sky - sekarang menjadi bagian dari efek background utama */}
+      {/* 🔹 Background sky  */}
       <img
         src={bg}
         alt="Background"
         className="absolute inset-0 w-full h-[100vh] object-cover 
                    min-w-[200%] min-h-[100%] sm:min-w-full z-0"
-        // Tidak ada motion di sini, karena parent motion.div yang mengontrol
       />
 
-      {/* 🔹 Lapisan jendela - tidak ada animasi pergerakan individual */}
+      {/* 🔹 Lapisan jendela*/}
       <img
         src={jendela}
         alt="Window"
         className="absolute inset-0 w-full h-full object-cover z-10"
-        // Tidak ada motion di sini, karena parent motion.div yang mengontrol
       />
 
-      {/* 🔹 Judul WELCOME! - muncul bersamaan dengan fade-in utama */}
+      {/* 🔹 Judul WELCOME! */}
       <h1
         className="font-josefin absolute inset-x-0 
                    top-[25%] md:top-[22%] lg:top-[18%] 
                    text-center 
-                   text-[clamp(60px,10vw,120px)]  
+                   text-[clamp(50px,10vw,120px)]  
                    font-extrabold leading-tight
                    text-white                       
                    drop-shadow-[0_0_40px_#617850]   
                    z-20 px-4"
-        // Hapus motion, karena parent motion.div yang mengontrol opacity
       >
         {"WELCOME!".split("").map((char, i) => (
           <span
             key={i}
-            className="inline-block animate-wave" // Tetap pakai animasi wave jika diinginkan
+            className="inline-block animate-wave" 
             style={{ animationDelay: `${i * 0.15}s` }}
           >
             {char}
@@ -54,7 +50,7 @@ function Opening() {
         ))}
       </h1>
 
-      {/* 🔹 Tombol bubble utama - muncul bersamaan dengan fade-in utama */}
+      {/* 🔹 Tombol bubble utama*/}
       <p
         className="font-itim absolute top-[67%] left-1/2 -translate-x-1/2 
                    inline-block text-center 

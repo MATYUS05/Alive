@@ -6,9 +6,11 @@ import Sky from "../assets/HomeAssets/Sky.png";
 import slide1 from "../assets/Logo/Home/car1.JPG";
 import slide2 from "../assets/Logo/Home/car2.JPG";
 import slide3 from "../assets/Logo/Home/car3.JPG";
+import slide4 from "../assets/Logo/Home/car4.JPG"
+import slide5 from "../assets/Logo/Home/car5.JPG"
 
 export default function Home() {
-  const slides = [slide1, slide2, slide3];
+  const slides = [slide1, slide2, slide3, slide4, slide5];
   const [current, setCurrent] = useState(0);
   const carouselRef = useRef(null);
   const MotionLink = motion(Link);
