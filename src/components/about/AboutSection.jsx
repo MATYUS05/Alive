@@ -20,12 +20,12 @@ const AboutSection = () => {
     <div className="flex flex-col items-center justify-center text-center px-4 sm:px-8 md:px-20">
       <motion.h2
         className="text-4xl lg:text-5xl font-josefin font-bold mb-6 sm:mb-8 mt-24
-                   text-[#5d3f2d]"
+                   text-amber-900"
         initial={{ y: -50, opacity: 0, scale: 0.9 }}
         animate={{ y: 0, opacity: 1, scale: 1 }}
         transition={{ type: "spring", stiffness: 100 }}
       >
-        About Alive 11.0
+        About ALIVE 11.0
       </motion.h2>
 
       <motion.div
@@ -45,7 +45,7 @@ const AboutSection = () => {
             className="text-justify text-gray-700 text-base sm:text-lg md:text-xl leading-relaxed"
             variants={itemVariants}
           >
-            Pada tahun ini Alive 11.0 mengangkat tema kesehatan mental yaitu self-image yang berfokus pada stress dan mindset. Alive 11.0 sendiri akan dilaksanakan pada tanggal 10-12 November 2025. Alive 11.0 sendiri akan memiliki 2 rangkaian yaitu REST Station dan MIND
+            Pada tahun ini ALIVE 11.0 mengangkat tema kesehatan mental yaitu self-image yang berfokus pada stress dan mindset. Alive 11.0 sendiri akan dilaksanakan pada tanggal 10-12 November 2025. ALIVE 11.0 memiliki 2 rangkaian yaitu REST Station dan MIND
 
             
           </motion.p>

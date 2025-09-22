@@ -63,7 +63,7 @@ function Events() {
 
   return (
     <div
-      className="font-itim w-screen min-h-screen relative pb-40 flex items-center justify-center p-4 md:p-10 overflow-hidden scroll-smooth"
+      className="w-screen min-h-screen relative pb-40 flex items-center justify-center p-4 md:p-10 overflow-hidden scroll-smooth"
       style={{
         backgroundImage: `url(${kayu})`,
         backgroundRepeat: "repeat-y",
@@ -113,7 +113,7 @@ function Events() {
                     />
                   </p>
                   <div className="mt-6 max-h-60 overflow-y-auto pr-2">
-                    <p className="text-center text-amber-950 whitespace-pre-line">
+                    <p className="font-itim text-center text-amber-950 whitespace-pre-line">
                       {card.text}
                     </p>
                   </div>
@@ -144,7 +144,7 @@ function Events() {
               {cardsData.map((card, idx) => (
                 <div key={idx} className="flex-shrink-0 w-full px-2">
                   <h2
-                    className={`${card.titleColor} text-4xl font-extrabold tracking-widest text-center mb-8 md:mt-24`}
+                    className={`${card.titleColor} text-4xl font-josefin font-extrabold tracking-widest text-center mb-8 md:mt-24`}
                   >
                     {card.title === "R_E_S_T_" ? (
                       <span className="typing-effect-rest">{card.title}</span>
@@ -159,7 +159,7 @@ function Events() {
                       <SlotDate finalDate={card.date} startAnimation={true} />
                     </p>
                     <div className="mt-4 max-h-60 overflow-y-auto pr-2">
-                      <p className="text-center text-amber-950 whitespace-pre-line">
+                      <p className="font-itim text-center text-amber-950 whitespace-pre-line">
                         {card.text}
                       </p>
                     </div>

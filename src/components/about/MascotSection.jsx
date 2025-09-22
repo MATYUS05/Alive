@@ -1,31 +1,34 @@
-import React, { useState } from 'react';
-import Seed from '../../assets/AboutAssets/Seed.webp';
-import Shui from '../../assets/AboutAssets/Shui.webp';
-import Sol from '../../assets/AboutAssets/Sol.webp';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from "react";
+import Seed from "../../assets/AboutAssets/Seed.webp";
+import Shui from "../../assets/AboutAssets/Shui.webp";
+import Sol from "../../assets/AboutAssets/Sol.webp";
+import { motion, AnimatePresence } from "framer-motion";
 
 const mascotData = [
   {
     name: "Shui",
-    description: "Shui adalah maskot yang melambangkan ketenangan dan kejernihan pikiran.",
+    description:
+      "Shui adalah maskot yang melambangkan ketenangan dan kejernihan pikiran.",
     img: Shui,
     className: "w-28 sm:w-36 md:w-56 lg:w-80",
-    gridPosition: "col-start-1 row-start-2"
+    gridPosition: "col-start-1 row-start-2",
   },
   {
     name: "Seed",
-    description: "Seed melambangkan pertumbuhan dan harapan baru bagi setiap individu.",
+    description:
+      "Seed melambangkan pertumbuhan dan harapan baru bagi setiap individu.",
     img: Seed,
     className: "w-32 sm:w-40 md:w-64 lg:w-96",
-    gridPosition: "col-start-2 row-start-1 z-20"
+    gridPosition: "col-start-2 row-start-1 z-20",
   },
   {
     name: "Sol",
-    description: "Sol adalah simbol semangat dan kehangatan dalam perjalanan hidup.",
+    description:
+      "Sol adalah simbol semangat dan kehangatan dalam perjalanan hidup.",
     img: Sol,
     className: "w-28 sm:w-36 md:w-56 lg:w-80",
-    gridPosition: "col-start-3 row-start-2"
-  }
+    gridPosition: "col-start-3 row-start-2",
+  },
 ];
 
 const MascotCard = ({ name, img, className, onClick, gridPosition }) => {
@@ -45,7 +48,9 @@ const MascotCard = ({ name, img, className, onClick, gridPosition }) => {
       />
       {/* Radial shadow */}
       <motion.div
-        className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 ${name === 'Seed' ? 'h-14' : 'h-12'} 
+        className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 ${
+          name === "Seed" ? "h-14" : "h-12"
+        } 
                    bg-[radial-gradient(ellipse_at_center,_rgba(0,0,0,0.5)_0%,_transparent_80%)] 
                    z-0 rounded-full`}
         initial={{ opacity: 0, scale: 0.8 }}
@@ -62,12 +67,16 @@ const MascotSection = () => {
 
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { staggerChildren: 0.05 } }
+    visible: { opacity: 1, transition: { staggerChildren: 0.05 } },
   };
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
-    visible: { y: 0, opacity: 1, transition: { type: "spring", stiffness: 100, damping: 10 } }
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { type: "spring", stiffness: 100, damping: 10 },
+    },
   };
 
   return (
@@ -81,31 +90,44 @@ const MascotSection = () => {
           viewport={{ once: true }}
         >
           {"Meet our mascots!".split(" ").map((word, i) => (
-            <motion.span key={i} variants={itemVariants} className="inline-block mr-1 sm:mr-2">
+            <motion.span
+              key={i}
+              variants={itemVariants}
+              className="inline-block mr-1 sm:mr-2"
+            >
               {word}
             </motion.span>
           ))}
         </motion.h2>
 
         <motion.p
-          className="text-sm sm:text-base md:text-lg lg:text-xl italic text-gray-600 mb-4 md:mb-8"
+          className="inline-block px-3 py-2 rounded-lg
+             text-sm sm:text-base md:text-lg lg:text-xl 
+             italic text-gray-600 mb-4 md:mb-8 
+             bg-white/80 shadow"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
         >
           {"Click each of us to know more.".split(" ").map((word, i) => (
-            <motion.span key={i} variants={itemVariants} className="inline-block mr-1 sm:mr-2">
+            <motion.span
+              key={i}
+              variants={itemVariants}
+              className="inline-block mr-1 sm:mr-2"
+            >
               {word}
             </motion.span>
           ))}
         </motion.p>
-        
-        <div className="
+
+        <div
+          className="
           grid grid-cols-3 place-items-center
           md:flex md:flex-row md:justify-center md:items-end
           relative z-10
-        ">
+        "
+        >
           {mascotData.map((mascot) => (
             <MascotCard
               key={mascot.name}
@@ -133,20 +155,23 @@ const MascotSection = () => {
               initial={{ y: 100, scale: 0.9 }}
               animate={{ y: 0, scale: 1 }}
               exit={{ y: 100, scale: 0.9 }}
-              transition={{ type: 'spring', stiffness: 200, damping: 20 }}
+              transition={{ type: "spring", stiffness: 200, damping: 20 }}
               onClick={(e) => e.stopPropagation()}
             >
               <img
-                src={mascotData.find(m => m.name === selectedMascot).img}
-                alt={mascotData.find(m => m.name === selectedMascot).name}
+                src={mascotData.find((m) => m.name === selectedMascot).img}
+                alt={mascotData.find((m) => m.name === selectedMascot).name}
                 className="w-24 sm:w-32 md:w-40 lg:w-56 h-auto drop-shadow-xl"
               />
               <div className="text-center md:text-left">
                 <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-[#5d3f2d] mb-2 md:mb-4">
-                  {mascotData.find(m => m.name === selectedMascot).name}
+                  {mascotData.find((m) => m.name === selectedMascot).name}
                 </h3>
                 <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 leading-relaxed">
-                  {mascotData.find(m => m.name === selectedMascot).description}
+                  {
+                    mascotData.find((m) => m.name === selectedMascot)
+                      .description
+                  }
                 </p>
               </div>
             </motion.div>

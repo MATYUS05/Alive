@@ -105,7 +105,7 @@ export default function Home() {
             transition={{ delay: 0.5, duration: 0.8 }}
           >
             <p className="text-base sm:text-lg md:text-xl leading-relaxed text-[#444B35] text-justify">
-              Alive sendiri merupakan kegiatan tahunan yang mengangkat mengenai
+              ALIVE sendiri merupakan kegiatan tahunan yang mengangkat mengenai
               isu-isu kesehatan. Kegiatan ini sendiri berisi edukasi kesehatan
               yang dapat menjadi sarana menyebarkan dan meningkatkan kesadaran
               mengenai pentingnya menjaga kesehatan diri masing-masing.
@@ -150,7 +150,7 @@ export default function Home() {
         >
           {/* Carousel */}
           <motion.div
-            className="w-full max-w-[380px] sm:max-w-[360px] md:max-w-[480px] xl:max-w-[640px] mx-auto px-2 sm:px-4"
+            className="w-full max-w-[380px] sm:max-w-[360px] md:max-w-[480px] xl:max-w-[550px] mx-auto px-2 sm:px-4"
             whileHover={{ scale: 1.03 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
           >
@@ -187,13 +187,13 @@ export default function Home() {
             transition={{ duration: 0.3 }}
           >
             Get to know more about{" "}
-            <span className="text-[#5C3C38]">Alive 11.0</span>
+            <span className="text-[#5C3C38]">ALIVE 11.0</span>
           </motion.div>
 
           {/* CTA Button */}
           <MotionLink
             to="/About"
-            className="mt-3 mb-10 md:mb-6 px-6 md:px-8 py-3 
+            className="mt-3 mb-10 px-6 md:px-8 py-3 
                        bg-gradient-to-r from-[#B0BEA6] to-[#94A890]
                        font-itim text-[#47553D] 
                        text-lg md:text-xl rounded-xl font-bold shadow-md  

@@ -15,7 +15,7 @@ import Sol from "../assets/AboutAssets/Sol.png";
 // --- Konfigurasi Game ---
 const PLAYER_WIDTH = 50,
   PLAYER_HEIGHT = 50,
-  PLAYER_STEP = 7,
+  PLAYER_STEP = 5,
   SLIDING_BLOCK_WIDTH_DESKTOP = 120,
   SLIDING_BLOCK_HEIGHT_DESKTOP = 40,
   FALLING_BLOCK_WIDTH_DESKTOP = 100,
@@ -499,7 +499,7 @@ function Games() {
       >
         <motion.h1
           variants={itemVariants}
-          className="text-3xl sm:text-4xl md:text-5xl mb-2 mt-20 text-[#6D4C41] font-bold"
+          className="text-3xl sm:text-4xl md:text-5xl mb-2 mt-20 text-amber-900 font-bold"
         >
           {titleText.split("").map((char, index) => (
             <span
@@ -670,17 +670,17 @@ function Games() {
                       onClick={() =>
                         handleCharacterSelect(characters[currentCharacterIndex])
                       }
-                      className="flex flex-col items-center p-2 sm:p-4 rounded-lg bg-gray-700 cursor-pointer mx-2 sm:mx-4 w-48 text-center"
+                      className="flex flex-col items-center p-2 sm:p-4 rounded-lg bg-gray-700 cursor-pointer mx-2 sm:mx-4 w-48 text-center space-y-1"
                     >
                       <img
                         src={characters[currentCharacterIndex].image}
                         alt={characters[currentCharacterIndex].name}
-                        className="w-20 h-20 sm:w-28 sm:h-28 object-contain mb-2"
+                        className="w-20 h-20 sm:w-28 sm:h-28 object-contain mb-1"
                       />
                       <h3 className="text-lg sm:text-2xl">
                         {characters[currentCharacterIndex].name}
                       </h3>
-                      <p className="text-xs mt-1 text-yellow-300">
+                      <p className="text-xs mt-0.5 text-yellow-300 mb-3">
                         {characters[currentCharacterIndex].skill.name}
                       </p>
                     </div>
@@ -784,21 +784,23 @@ function Games() {
                   ? "bg-yellow-400 text-black shadow-lg shadow-yellow-400/50"
                   : "bg-gray-600 text-gray-400"
               }`}
-              onClick={handleActivateSkill}
+              onPointerDown={(e) => {
+                e.preventDefault();
+                handleActivateSkill();
+              }}
               disabled={!skillReady || selectedCharacter?.skill.duration === 0}
             >
               {skillReady ? "SKILL" : `${skillCooldownTime}s`}
             </button>
+
             <button
               className="w-16 h-16 sm:w-20 sm:h-20 bg-[#5D4037] rounded-full text-3xl sm:text-4xl active:bg-opacity-80"
-              onTouchStart={handleJump}
-              onMouseDown={(e) => {
+              onPointerDown={(e) => {
                 e.preventDefault();
                 handleJump();
               }}
             >
-              {" "}
-              ▲{" "}
+              ▲
             </button>
           </div>
         </motion.div>

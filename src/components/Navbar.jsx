@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { Menu, X } from "react-feather";
 import { motion, AnimatePresence } from "framer-motion";
+import { FaGamepad } from "react-icons/fa"; // 🎮 Icon Games
 import navLinks from "../data/navlinks";
 import "../styles/Navbar.css";
 
@@ -31,17 +32,51 @@ function Navbar() {
           to={link.to}
           onClick={() => setIsMobileMenuOpen(false)}
           className={({ isActive }) =>
-            `relative font-josefin font-bold text-lg tracking-wider py-2 block
-           transition-colors duration-300
-           ${isActive ? "text-[#B0BEA6]" : "text-white hover:text-[#617850]"}
-           lg:after:content-[''] lg:after:absolute lg:after:left-0 lg:after:bottom-0
-           lg:after:w-full lg:after:h-[2px] lg:after:bg-[#B0BEA6]
-           lg:after:scale-x-0 lg:after:origin-center
-           lg:after:transition-transform lg:after:duration-300
-           ${isActive ? "lg:after:scale-x-100" : "lg:hover:after:scale-x-100"}`
+            link.text === "Games"
+              ? `
+              relative block transition-all duration-300 
+              flex items-center justify-center
+              ${
+                isMobileMenuOpen
+                  ? // 📱 mobile menu style → lebih gede & menonjol
+                    `w-14 h-14 rounded-full mx-auto 
+                   ${
+                     isActive
+                       ? "bg-[#B0BEA6] text-[#2E2E2E]"
+                       : "bg-[#617850] text-white hover:bg-[#B0BEA6] hover:text-[#2E2E2E]"
+                   }`
+                  : // 💻 desktop style
+                    `py-2 px-4 rounded-full
+                   ${
+                     isActive
+                       ? "bg-[#B0BEA6] text-[#2E2E2E]"
+                       : "bg-[#617850] text-white hover:bg-[#B0BEA6] hover:text-[#2E2E2E]"
+                   }`
+              }
+            `
+              : `relative font-josefin font-bold text-lg tracking-wider py-2 block
+               transition-colors duration-300
+               ${
+                 isActive ? "text-[#B0BEA6]" : "text-white hover:text-[#617850]"
+               }
+               lg:after:content-[''] lg:after:absolute lg:after:left-0 lg:after:bottom-0
+               lg:after:w-full lg:after:h-[2px] lg:after:bg-[#B0BEA6]
+               lg:after:scale-x-0 lg:after:origin-center
+               lg:after:transition-transform lg:after:duration-300
+               ${
+                 isActive
+                   ? "lg:after:scale-x-100"
+                   : "lg:hover:after:scale-x-100"
+               }`
           }
         >
-          {link.text}
+          {link.text === "Games" ? (
+            <FaGamepad
+              className={`w-6 h-6 ${isMobileMenuOpen ? "w-8 h-8" : ""}`}
+            />
+          ) : (
+            link.text
+          )}
         </NavLink>
       </li>
     ));

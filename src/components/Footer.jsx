@@ -1,6 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { FaInstagram, FaTiktok } from "react-icons/fa6";
+import { FaInstagram, FaTiktok, FaEnvelope } from "react-icons/fa6";
 import AliveLogo from "../assets/Logo/AliveLogo.png";
 
 function Footer() {
@@ -8,16 +7,45 @@ function Footer() {
     <footer className="bg-[#5D4037] text-white font-josefin pt-12 pb-6">
       {/* Top Section */}
       <div className="font-itim container mx-auto px-8 flex flex-col md:flex-row items-start justify-between gap-10 md:gap-0">
-        {/* Quick Links */}
-        <div className="flex flex-col items-center md:items-start w-full md:w-1/3">
-          <span className="font-semibold text-lg tracking-wide mb-3">
-            Universitas Multimedia Nusantara
-          </span>
-          <div className="text-center md:text-left space-y-1 text-sm">
-            <p>Jl. Scientia Boulevard, Gading Serpong</p>
-            <p>Tangerang, Banten - 15811 Indonesia</p>
-            <p>(t) +62-21.5422.0808</p>
-            <p>(f) +62-21.5422.0800</p>
+        {/* Quick Links + Media Partner + Sponsor */}
+        <div className="flex flex-col items-center md:items-start w-full md:w-1/3 space-y-4">
+          {/* Address */}
+          <div>
+            <span className="font-semibold text-lg tracking-wide mb-2 block">
+              Universitas Multimedia Nusantara
+            </span>
+            <div className="text-center md:text-left space-y-1 text-sm">
+              <p>Jl. Scientia Boulevard, Gading Serpong</p>
+              <p>Tangerang, Banten - 15811 Indonesia</p>
+            </div>
+          </div>
+
+          {/* Media Partner + Sponsor */}
+          <div className="flex flex-col md:flex-row md:space-x-6 w-full items-stretch text-center md:text-left">
+            {/* Media Partner */}
+            <div className="flex-1">
+              <span className="font-semibold text-lg tracking-wide mb-2 block">
+                Media Partner
+              </span>
+              <div className="text-sm space-y-1">
+                <p>Felicia - 08111392311</p>
+                <p>Daffa - 0895363581682</p>
+              </div>
+            </div>
+
+            {/* Divider */}
+            <div className="my-4 md:my-0 md:mx-2 border-t border-white/30 md:border-t-0 md:border-l"></div>
+
+            {/* Sponsor */}
+            <div className="flex-1">
+              <span className="font-semibold text-lg tracking-wide mb-2 block">
+                Sponsor
+              </span>
+              <div className="text-sm space-y-1">
+                <p>Elshaday - 085182647827</p>
+                <p>Bella - 087813942265</p>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -45,6 +73,15 @@ function Footer() {
             >
               <FaTiktok className="w-7 h-7" />
             </a>
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=aliveumn@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#B0BEA6] transition-colors"
+              aria-label="Email"
+            >
+              <FaEnvelope className="w-7 h-7" />
+            </a>
           </div>
         </div>
 
@@ -69,7 +106,7 @@ function Footer() {
 
       {/* Bottom Text */}
       <p className="text-center text-sm text-gray-300">
-        © {new Date().getFullYear()} Alive 11.0
+        © {new Date().getFullYear()} ALIVE 11.0
       </p>
     </footer>
   );

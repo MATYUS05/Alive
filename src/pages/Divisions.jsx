@@ -214,7 +214,7 @@ function Divisions() {
                 alt={selectedDivision.name}
                 className="w-32 h-32 object-contain drop-shadow-xl"
               />
-              <div className="text-center">
+              <div className="font-itim text-center">
                 <h3 className="font-bold text-[#5d3f2d] mb-3 text-2xl">
                   {selectedDivision.name}
                 </h3>
