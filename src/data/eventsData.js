@@ -33,7 +33,7 @@ Rest Station terdiri dari 4 booth interaktif:
     date: "12/11/2025",
     text: `MIND: Manifesting Your Inner-Health Education
     
-    Mind merupakan puncak rangkaian ALIVE 11.0. Mind merupakan talkshow yang akan dilaksanakan pada tanggal 12 November 2025 di Lecture Theatre Universitas Multimedia Nusantara`,
+    MIND merupakan puncak rangkaian ALIVE 11.0. MIND merupakan talkshow yang akan dilaksanakan pada tanggal 12 November 2025 di Lecture Theatre Universitas Multimedia Nusantara. Manifesting Your Inner-Health Education akan memiliki pembahasan mengenai mindset tentang topik manifesting yang akan dibawakan oleh Anette Isabella Ginting dengan fokus pada bidang law of attraction.`,
     titleColor: "text-lime-600",
     flower: bungaMind,
   },

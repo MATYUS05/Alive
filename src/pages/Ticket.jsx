@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import bg from "../assets/Ticket/bg.png"; // background
+import bg from "../assets/Ticket/bg.png"; 
 
 export default function TicketPage() {
-  const eventDate = new Date("2025-10-01T09:00:00");
+  const eventDate = new Date("2025-11-01T09:00:00");
   const [timeLeft, setTimeLeft] = useState(getTimeRemaining());
 
   function getTimeRemaining() {
@@ -62,7 +62,7 @@ function CountdownBox({ value, label }) {
     >
       <AnimatePresence mode="wait">
         <motion.p
-          key={value} // supaya tiap value baru di-animate
+          key={value}
           initial={{ scale: 0.5, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           exit={{ scale: 1.2, opacity: 0 }}

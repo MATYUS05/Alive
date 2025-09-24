@@ -63,12 +63,11 @@ function Opening() {
                    z-20 subtle-text 
                    whitespace-normal md:whitespace-nowrap 
                    leading-snug max-w-[95vw] md:max-w-[85vw]"
-        // Hapus motion, karena parent motion.div yang mengontrol opacity
       >
         Want to know more about ALIVE?
       </p>
 
-      {/* 🔹 Hint bubble - muncul bersamaan dengan fade-in utama */}
+      {/* 🔹 Hint bubble*/}
       <p
         className="font-itim bubble absolute top-[60%] md:top-[58%] left-1/2 -translate-x-7
                    bg-[#617850] font-bold 
@@ -80,7 +79,6 @@ function Opening() {
                    before:content-[''] before:absolute before:top-full before:left-1/2 
                    before:-translate-x-1/2 before:border-8 before:border-transparent 
                    before:border-t-[#617850] hover:bg-[#4e6240]"
-        // Hapus motion, karena parent motion.div yang mengontrol opacity
       >
         Click on the window knobs!
       </p>

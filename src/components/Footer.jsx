@@ -7,8 +7,9 @@ function Footer() {
     <footer className="bg-[#5D4037] text-white font-josefin pt-12 pb-6">
       {/* Top Section */}
       <div className="font-itim container mx-auto px-8 flex flex-col md:flex-row items-start justify-between gap-10 md:gap-0">
-        {/* Address */}
-        <div className="flex flex-col items-center md:items-start w-full md:w-1/3 space-y-4">
+        {/* Address + Media Partner & Sponsor */}
+        <div className="flex flex-col items-center md:items-start w-full md:w-1/3 space-y-6">
+          {/* Address */}
           <div>
             <span className="font-semibold text-lg tracking-wide mb-2 block">
               Universitas Multimedia Nusantara
@@ -16,15 +17,37 @@ function Footer() {
             <div className="text-center md:text-left space-y-1 text-sm">
               <p>Jl. Scientia Boulevard, Gading Serpong</p>
               <p>Tangerang, Banten - 15811 Indonesia</p>
-              <p>(t) +62-21.5422.0808</p>
-              <p>(f) +62-21.5422.0800</p>
+            </div>
+          </div>
+
+          {/* Media Partner + Sponsor pindah ke bawah Address */}
+          <div className="flex flex-col md:flex-row md:space-x-6 w-full items-center md:items-start text-center md:text-left">
+            {/* Media Partner */}
+            <div className="mb-4 md:mb-0 flex-1">
+              <span className="font-semibold text-lg tracking-wide mb-2 block">
+                Media Partner
+              </span>
+              <div className="text-sm space-y-1">
+                <p>Felicia - 08111392311</p>
+                <p>Daffa - 0895363581682</p>
+              </div>
+            </div>
+
+            {/* Sponsor */}
+            <div className="flex-1">
+              <span className="font-semibold text-lg tracking-wide mb-2 block">
+                Sponsor
+              </span>
+              <div className="text-sm space-y-1">
+                <p>Elshaday - 085182647827</p>
+                <p>Bella - 087813942265</p>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Social Media + Media Partner + Sponsor */}
+        {/* Social Media */}
         <div className="flex flex-col items-center md:items-center w-full md:w-1/3 space-y-6">
-          {/* Connect With Us */}
           <div className="flex flex-col items-center space-y-4">
             <span className="font-semibold text-lg tracking-wide">
               Connect With Us
@@ -59,34 +82,9 @@ function Footer() {
               </a>
             </div>
           </div>
-
-          {/* Media Partner + Sponsor */}
-          <div className="flex flex-col md:flex-row md:space-x-6 w-full items-center md:items-stretch text-center">
-            {/* Media Partner */}
-            <div className="mb-4 md:mb-0 flex-1">
-              <span className="font-semibold text-lg tracking-wide mb-2 block">
-                Media Partner
-              </span>
-              <div className="text-sm space-y-1">
-                <p>Felicia - 08111392311</p>
-                <p>Daffa - 0895363581682</p>
-              </div>
-            </div>
-
-            {/* Sponsor */}
-            <div className="flex-1">
-              <span className="font-semibold text-lg tracking-wide mb-2 block">
-                Sponsor
-              </span>
-              <div className="text-sm space-y-1">
-                <p>Elshaday - 085182647827</p>
-                <p>Bella - 087813942265</p>
-              </div>
-            </div>
-          </div>
         </div>
 
-        {/* Logo (Klik = IG) */}
+        {/* Logo tetap di kanan */}
         <div className="flex justify-center md:justify-end w-full md:w-1/3">
           <a
             href="https://www.instagram.com/alivemedic.umn"
