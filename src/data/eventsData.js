@@ -10,7 +10,7 @@ export const cardsData = [
     
     REST Station merupakan rangkaian pertama ALIVE 11.0 yang akan dilaksanakan pada tanggal 10–12 November di lobby Gedung D. 
 
-Rest Station terdiri dari 4 booth interaktif:
+REST Station terdiri dari 4 booth interaktif:
 
 1. Release and Reset 
    Peserta dapat melepaskan stres dengan mencoret-coret, menggambar, atau menulis perasaan mereka di sebuah sticky note.
