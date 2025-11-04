@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import canvas from "../assets/Ticket/banner.png";
 import bg from "../assets/Ticket/bg.png";
-import calendar from "../assets/Ticket/calendar.svg"; // (Sebenarnya ini bisa dihapus)
-import location from "../assets/Ticket/location.svg"; // (Sebenarnya ini bisa dihapus)
 import poster from "../assets/Ticket/poster.png";
 
 export default function TicketPage() {
@@ -49,7 +47,9 @@ export default function TicketPage() {
 
   return (
     <div
-      className="w-full min-h-screen flex justify-center items-start font-josefinn"
+      // --- PERUBAHAN ADA DI SINI ---
+      className="w-full min-h-screen flex justify-center items-start font-josefinn overflow-hidden"
+      // -----------------------------
       style={{
         backgroundImage: `url(${bg})`,
         backgroundSize: "cover",
@@ -124,13 +124,11 @@ export default function TicketPage() {
                 className="text-left text-[#47553D] w-full"
                 style={{
                   fontSize: "clamp(8px, 2vw, 24px)",
-                  marginTop: 0, // DIUBAH
+                  marginTop: 0,
                 }}
               >
-                {/* --- TULISAN TANGGAL & LOKASI DIHAPUS DARI SINI --- */}
-
                 <motion.div
-                  className="font-itim text-center mt-4" // DIUBAH: dari mt-1 jadi mt-4
+                  className="font-itim text-center mt-4"
                   initial={{ opacity: 0, y: 40 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, ease: "easeOut" }}
@@ -171,7 +169,7 @@ export default function TicketPage() {
                       whileHover={{ y: -3 }}
                       transition={{ type: "spring", stiffness: 300 }}
                     >
-                      Click Here
+                      🎟️ Click Here
                     </motion.button>
                   </motion.a>
                 </motion.div>
