@@ -47,7 +47,7 @@ export default function TicketPage() {
 
   return (
     <div  
-      className="w-full min-h-[100svh] flex justify-center items-start font-josefinn overflow-hidden"
+      className="w-full min-h-screen flex justify-center items-start font-josefinn overflow-hidden"
       style={{
         backgroundImage: `url(${bg})`,
         backgroundSize: "cover",
