@@ -46,10 +46,8 @@ export default function TicketPage() {
   const eventStarted = timeLeft.total <= 0;
 
   return (
-    <div
-      // --- PERUBAHAN ADA DI SINI ---
-      className="w-full min-h-screen flex justify-center items-start font-josefinn overflow-hidden"
-      // -----------------------------
+    <div  
+      className="w-full min-h-[100svh] flex justify-center items-start font-josefinn overflow-hidden"
       style={{
         backgroundImage: `url(${bg})`,
         backgroundSize: "cover",
@@ -169,7 +167,7 @@ export default function TicketPage() {
                       whileHover={{ y: -3 }}
                       transition={{ type: "spring", stiffness: 300 }}
                     >
-                      🎟️ Click Here
+                      Click Here
                     </motion.button>
                   </motion.a>
                 </motion.div>
