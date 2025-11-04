@@ -47,14 +47,15 @@ export default function TicketPage() {
 
   return (
     <div  
-      className="w-full min-h-screen flex justify-center items-start font-josefinn overflow-hidden"
-      style={{
-        backgroundImage: `url(${bg})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
-    >
+  className="w-full min-h-[100svh] flex justify-center items-start font-josefinn overflow-hidden pt-16 lg:pt-20"
+  style={{
+    backgroundImage: `url(${bg})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+  }}
+>
+
       <motion.div
         className="relative w-full max-w-[1200px] mt-8"
         initial={{ opacity: 0, y: 50 }}

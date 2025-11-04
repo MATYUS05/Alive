@@ -34,18 +34,18 @@ function Navbar() {
           className={({ isActive }) =>
             link.text === "Games"
               ? `
-              relative block transition-all duration-300 
+              relative transition-all duration-300 
               flex items-center justify-center
               ${
                 isMobileMenuOpen
-                  ? // 📱 mobile menu style → lebih gede & menonjol
+                  ?
                     `w-14 h-14 rounded-full mx-auto 
                    ${
                      isActive
                        ? "bg-[#B0BEA6] text-[#2E2E2E]"
                        : "bg-[#617850] text-white hover:bg-[#B0BEA6] hover:text-[#2E2E2E]"
                    }`
-                  : // 💻 desktop style
+                  : 
                     `py-2 px-4 rounded-full
                    ${
                      isActive
