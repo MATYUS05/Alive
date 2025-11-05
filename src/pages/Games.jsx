@@ -7,7 +7,7 @@ import React, {
 } from "react";
 import { Joystick } from "react-joystick-component";
 import { motion } from "framer-motion";
-import SkyBackground from "../assets/HomeAssets/Sky.png";
+import SkyBackground from "../assets/HomeAssets/Sky.webp";
 import Seed from "../assets/AboutAssets/Seed.png";
 import Shui from "../assets/AboutAssets/Shui.png";
 import Sol from "../assets/Logo/Character/Sol.png";

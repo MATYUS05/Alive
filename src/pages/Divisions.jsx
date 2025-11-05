@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { divisions } from "../components/Division/card";
-import Background from "../assets/DivisionAssets/shelf.png";
+import Background from "../assets/DivisionAssets/shelf.webp";
 import { motion, AnimatePresence } from "framer-motion";
 import { DivisionInfoBox } from "../components/Division/DivisionInfoBox";
 import { useMediaQuery } from "../components/Division/useMediaQuery";
-import Awan from "../assets/DivisionAssets/Awan2.png";
-import FlowerBlue from "../assets/DivisionAssets/FlowerBlue.png";
-import FlowerYellow from "../assets/DivisionAssets/FlowerYellow.png";
-import FlowerPurple from "../assets/DivisionAssets/FlowerPurple.png";
-import FlowerGreen from "../assets/DivisionAssets/FlowerGreen.png";
+import Awan from "../assets/DivisionAssets/Awan2.webp";
+import FlowerBlue from "../assets/DivisionAssets/FlowerBlue.webp";
+import FlowerYellow from "../assets/DivisionAssets/FlowerYellow.webp";
+import FlowerPurple from "../assets/DivisionAssets/FlowerPurple.webp";
+import FlowerGreen from "../assets/DivisionAssets/FlowerGreen.webp";
 
 const divisionPositions = [
   { top: "21.5%", left: "6.54%" },

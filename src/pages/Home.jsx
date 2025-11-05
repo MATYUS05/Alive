@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import OpenWindow from "../assets/HomeAssets/Window.png";
-import Sky from "../assets/HomeAssets/Sky.png";
-import slide1 from "../assets/Logo/Home/car1.JPG";
-import slide2 from "../assets/Logo/Home/car2.JPG";
-import slide3 from "../assets/Logo/Home/car3.JPG";
-import slide4 from "../assets/Logo/Home/car4.JPG"
-import slide5 from "../assets/Logo/Home/car5.JPG"
+import OpenWindow from "../assets/HomeAssets/Window.webp";
+import Sky from "../assets/HomeAssets/Sky.webp";
+import slide1 from "../assets/Logo/Home/car1.webp";
+import slide2 from "../assets/Logo/Home/car2.webp";
+import slide3 from "../assets/Logo/Home/car3.webp";
+import slide4 from "../assets/Logo/Home/car4.webp"
+import slide5 from "../assets/Logo/Home/car5.webp"
 
 export default function Home() {
   const slides = [slide1, slide2, slide3, slide4, slide5];

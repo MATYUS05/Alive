@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-import kayu from "../assets/EventsAssets/kayu.png";
-import bunga from "../assets/EventsAssets/bunga.png";
+import kayu from "../assets/EventsAssets/kayu.webp";
+import bunga from "../assets/EventsAssets/bunga.webp";
 import "../styles/events.css";
 
 import { cardsData } from "../data/eventsData";

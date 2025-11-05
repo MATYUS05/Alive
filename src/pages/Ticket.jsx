@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import canvas from "../assets/Ticket/banner.png";
-import bg from "../assets/Ticket/bg.png";
-import poster from "../assets/Ticket/poster.png";
+import canvas from "../assets/Ticket/banner.webp";
+import bg from "../assets/Ticket/bg.webp";
+import poster from "../assets/Ticket/poster.webp";
 
 export default function TicketPage() {
   const eventDate = new Date("2025-10-05T09:00:00");

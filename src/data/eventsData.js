@@ -1,5 +1,5 @@
-import bungaMind from "../assets/EventsAssets/mind.png";
-import bungaRest from "../assets/EventsAssets/rest.png";
+import bungaMind from "../assets/EventsAssets/mind.webp";
+import bungaRest from "../assets/EventsAssets/rest.webp";
 
 export const cardsData = [
   {

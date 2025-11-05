@@ -1,15 +1,15 @@
-import Passion from "../../assets/DivisionAssets/Passion.png"; 
-import Excitement from "../../assets/DivisionAssets/Excitement.png"; 
-import Expression from "../../assets/DivisionAssets/Expression.png"; 
-import Harmony from "../../assets/DivisionAssets/Harmony.png"; 
-import Gratitude from "../../assets/DivisionAssets/Gratitude.png"; 
-import Hope from "../../assets/DivisionAssets/Hope.png"; 
-import Nostalgia from "../../assets/DivisionAssets/Nostalgia.png"; 
-import Trust from "../../assets/DivisionAssets/Trust.png"; 
-import Resonance from "../../assets/DivisionAssets/Resonance.png"; 
-import Secure from "../../assets/DivisionAssets/Secure.png"; 
-import Serenity from "../../assets/DivisionAssets/Serenity.png"; 
-import Clarity from "../../assets/DivisionAssets/Clarity.png"; 
+import Passion from "../../assets/DivisionAssets/Passion.webp"; 
+import Excitement from "../../assets/DivisionAssets/Excitement.webp"; 
+import Expression from "../../assets/DivisionAssets/Expression.webp"; 
+import Harmony from "../../assets/DivisionAssets/Harmony.webp"; 
+import Gratitude from "../../assets/DivisionAssets/Gratitude.webp"; 
+import Hope from "../../assets/DivisionAssets/Hope.webp"; 
+import Nostalgia from "../../assets/DivisionAssets/Nostalgia.webp"; 
+import Trust from "../../assets/DivisionAssets/Trust.webp"; 
+import Resonance from "../../assets/DivisionAssets/Resonance.webp"; 
+import Secure from "../../assets/DivisionAssets/Secure.webp"; 
+import Serenity from "../../assets/DivisionAssets/Serenity.webp"; 
+import Clarity from "../../assets/DivisionAssets/Clarity.webp"; 
 
 export const divisions = [
   {

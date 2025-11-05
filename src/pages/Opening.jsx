@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import bg from "../assets/OpeningAssets/bg.png";
-import jendela from "../assets/OpeningAssets/tutup.png";
+import bg from "../assets/OpeningAssets/bg.webp";
+import jendela from "../assets/OpeningAssets/tutup.webp";
 import "../styles/opening.css";
 
 function Opening() {
